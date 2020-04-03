@@ -1,0 +1,58 @@
+/* main css file needed for every page */
+
+/* varibles for colours, fonts, and other */
+:root {
+    /* colors */
+    --bg-color: white;
+    --color: black;
+    --bg-color-hover: #e9e9e9;
+    --link-color: #05f;
+    --m-color: #999999;
+
+    /* Typography */
+    --font: "IBM Plex Sans", sans-serif;
+
+    /* widths (with the navbar and all that) */
+    --nav-width: 190px;
+    --max-page-width: 35%;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+  
+.page {
+    margin: 0 0 0 var(--nav-width);
+    max-width: var(--max-page-width);
+}
+
+.page-title {
+    font-size: 56px;
+    font-weight: bold;
+    margin: 6% 0 0 0;
+}
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
+    .page {
+        margin: 100px 5% 0 5%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 1000px) {
+    .page-title {
+        font-size: 72px;
+    }
+}

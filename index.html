@@ -13,14 +13,51 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <!-- navbar css -->
+  <link rel="stylesheet" type="text/css" href="./css/nav.css">
 
   <!-- favicon (no good one yet)-->
   <!-- <link rel="shortcut icon" href="./icon.png" type="image/png"> -->
-  
+
 </head>
 
 <body>
 
+  <!-- navbar -->
+  <nav id="mySidenav" class="nav">
+    <div class="navlist">
+      <a href="https://janikthepanic.github.io/my-site/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/notes/">Work</a>
+      <a href="/sketches/">Resume</a>
+      <a href="/blog/">Contact</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+  </nav>
+
+  <!-- little menu button for mobile -->
+  <span class="openbtn" onclick="openNav()">&#9776;</span>
+  <div class="btnbox"></div>
+
+  <div class="page">
+
+    <h1 class="page-title">Jahangir Abdullayev</h1>
+
+    <p>My name is Jahangir Abdullayev, Janik for short. I am a student at <a href="http://bci.wrdsb.ca/">Bluevale
+        Collegiate Institute</a>. Additionally, I am a leading member of <a href="https://2702rebels.com/">The 2702 Rebels.</a></p>
+
+  </div>
+
+  <script>
+    // open and close menu on mobile
+    function openNav() {
+      document.getElementById("mySidenav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.height = "0";
+    }
+  </script>
 
 </body>
 
