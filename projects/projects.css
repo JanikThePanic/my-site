@@ -1,0 +1,20 @@
+/* this is the css for all project pages and the project page itself */
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.project-list li {
+    padding: none;
+    color: black;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #ccc
+}
+
+.project-list a {
+    color: black;
+    font-weight: bold;
+}
