@@ -24,6 +24,10 @@ body {
     font-size: 18px;
 }
 
+p {
+    line-height: 160%;
+}
+
 a {
     color: var(--link-color);
     text-decoration: none;
