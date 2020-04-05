@@ -28,20 +28,22 @@ p {
     line-height: 160%;
 }
 
+/* links */
 a {
     color: var(--link-color);
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
 }
-  
+
+/* page bodies */
 .page {
     margin: 0 0 0 var(--nav-width);
     max-width: var(--max-page-width);
 }
 
+/* page titles */
 .page-title {
     font-size: 56px;
     font-weight: bold;
