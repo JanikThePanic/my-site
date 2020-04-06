@@ -14,7 +14,8 @@
 
     /* widths (with the navbar and all that) */
     --nav-width: 190px;
-    --max-page-width: 35%;
+    --max-page-width: 60rem;
+    --text-max-width: 35vw;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
 
 p {
     line-height: 160%;
+    width: var(--text-max-width);
 }
 
 /* links */
@@ -47,7 +49,7 @@ a:hover {
 .page-title {
     font-size: 56px;
     font-weight: bold;
-    margin: 6% 0 0 0;
+    margin: 4% 0 0 0;
 }
 
 /* mobile jazz */
@@ -55,6 +57,9 @@ a:hover {
     .page {
         margin: 80px 5% 15% 5%;
         max-width: 100%;
+    }
+    p {
+        width: 100%;
     }
 }
 @media (min-width: 1000px) {
