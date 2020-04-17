@@ -8,3 +8,5 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.height = "0";
 }
+
+// blog
