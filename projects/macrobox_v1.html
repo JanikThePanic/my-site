@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jahangir Abdullayev | MacroBox v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Work and website of Jahangir (Janik) Abdullayev">
+    <meta name="keywords" content="Janik,Jahangir,Abdullayev,Website">
+    <meta name="author" content="Jahangir (Janik) Abdullayev">
+
+    <!-- IBM Plex font -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!-- navbar css -->
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <!-- projects css -->
+    <link rel="stylesheet" type="text/css" href="./projects.css">
+    <!-- comparing images -->
+    <link href="../css/image-comparison-slider.css" rel="stylesheet">
+
+    <!-- favicon (no good one yet)-->
+    <!-- <link rel="shortcut icon" href="./icon.png" type="image/png"> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131751882-8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131751882-8');
+    </script>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav id="mySidenav" class="nav">
+        <div class="navlist">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/work">Work</a>
+            <a href="/assets/Resume.pdf">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+    </nav>
+
+    <!-- little menu button for mobile -->
+    <span onclick="openNav()"><img class="openbtn" src="../assets/iconfinder_menu-alt_134216.svg" alt=""></span>
+    <div class="btnbox"></div>
+
+    <!-- page content begins here -->
+
+    <div class="page">
+
+        <h1 class="page-title">MacroBox <sup>v1.0</sup></h1>
+        <p style="font-style:italic;">All files available on <a
+                href="https://github.com/JanikThePanic/macrobox-v1">GitHub</a>.</p>
+
+        <h2>Overview</h2>
+        <p>blam</p>
+
+        <div class="image-spliter">
+            <div class="mover"></div>
+            <img class="img-left" src="../assets/macrobox_v1/comp_top.png">
+            <img class="img-right" src="../assets/macrobox_v1/comp_under.png">
+        </div>
+
+        <model-viewer src="../assets/macrobox_v1/MB_Assem.glb" auto-rotate camera-orbit="110deg"
+            interaction-prompt="none" auto-rotate-delay="2000" interaction-prompt camera-controls
+            alt="A 3D model of an astronaut"></model-viewer>
+
+        <h2>Inspiration</h2>
+        <p>blam</p>
+
+    </div>
+
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+    <!-- comparing imgs -->
+    <script src="../js/image-comparison-slider.min.js"></script>
+    <!-- model veiwer -->
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    </script>
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+
+</body>
+
+</html>
