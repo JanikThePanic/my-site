@@ -8,19 +8,19 @@
     <meta name="description" content="Work and website of Jahangir (Janik) Abdullayev">
     <meta name="keywords" content="Janik,Jahangir,Abdullayev,Website">
     <meta name="author" content="Jahangir (Janik) Abdullayev">
-  
+
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Jahangir Abdullayev">
     <meta itemprop="description" content="Work and website of Jahangir (Janik) Abdullayev">
     <meta itemprop="image" content="">
-  
+
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="http://janik.dx.am">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jahangir Abdullayev">
     <meta property="og:description" content="Work and website of Jahangir (Janik) Abdullayev">
     <meta property="og:image" content="">
-  
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jahangir Abdullayev">
@@ -81,17 +81,75 @@
                 href="https://github.com/JanikThePanic/macrobox-v1">GitHub</a>.</p>
 
         <h2>Overview</h2>
-        <p>blam</p>
+        <p>
+            The MacroBox v1 is the first design in the MacroBox series.
+            <br>
+            It is the least budget efficient and least effective design as it is, after all the first design.
+        </p>
+        <p>
+            It contains a custom-designed PCB holding ten Cherry MX Blue Switches along with an ATmega32u4 as the brains
+            of the system. Eight of the switches are programmed to simulate keystrokes and act as macros for any use.
+            The top two switches change the board’s current “Mode” and macro “Page”, allowing the board to simulate more
+            than eight macros. The current “Mode” is displayed by the first RGB LED, showing a custom colour for the
+            mode, well the second LED displays the “Page”.
+        </p>
 
         <div class="image-spliter">
             <div class="mover"></div>
-            <img class="img-left" src="../assets/macrobox_v1/comp_top.png">
-            <img class="img-right" src="../assets/macrobox_v1/comp_under.png">
+            <img class="img-left cm_img" src="../assets/macrobox_v1/comp_top.png">
+            <img class="img-right cm_img" src="../assets/macrobox_v1/comp_under.png">
         </div>
+        <figcaption>Figure 1. Slide the Slider to reveal the inside</figcaption>
 
-        <model-viewer src="../assets/macrobox_v1/MB_Assem.glb" auto-rotate camera-orbit="110deg"
-            interaction-prompt="none" auto-rotate-delay="2000" interaction-prompt camera-controls
-            alt="A 3D model of an astronaut"></model-viewer>
+        <br>
+
+        <h2>Printed Circuit Board</h2>
+        <p>
+            The PCB for this project is 1.6mm thick and consists of two layers.
+            <br>
+            The files for the PCB are available only on <a href="https://easyeda.com/jk4abdl/macrobox">EasyEDA</a>.
+        </p>
+        <img class="cm_img" src="../assets/macrobox_v1/pcb_side.png" alt="Side View of PCB with components">
+        <figcaption>Figure 2. Perspective view of the PCB with electric components</figcaption>
+
+        <br>
+
+        <h2>Code</h2>
+        <p>
+            The plan was to flash the chip with the <a href="https://store.arduino.cc/usa/arduino-micro">Arduino
+                Micro</a> Firmware and program it in Arduino, with help from the <a
+                href="https://www.arduino.cc/reference/en/language/functions/usb/keyboard/">Keyboard Library</a>.
+            <br>
+            <br>
+            Unfortunately, I never got to that as I began working on a cheaper version, the MacroBox v2.
+        </p>
+
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <iframe scrolling='no' frameborder='0' allowfullscreen='true'
+            src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1348623&width=250&height=250&edraw=true'
+            id='mb_cad'></iframe>
 
         <h2>Inspiration</h2>
         <p>blam</p>
@@ -102,13 +160,6 @@
     <script src="../js/main.js"></script>
     <!-- comparing imgs -->
     <script src="../js/image-comparison-slider.min.js"></script>
-    <!-- model veiwer -->
-    <!-- Loads <model-viewer> for modern browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
-    </script>
-    <!-- Loads <model-viewer> for old browsers like IE11: -->
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-    </script>
 
 </body>
 

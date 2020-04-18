@@ -52,6 +52,13 @@ a:hover {
     margin: 4% 0 0 0;
 }
 
+/* for hr */
+hr {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin: 1em 0 1em 0;
+}
+
 /* mobile jazz */
 @media screen and (max-width: 600px) {
     .page {
