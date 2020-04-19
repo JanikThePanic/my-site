@@ -9,34 +9,37 @@ function closeNav() {
     document.getElementById("mySidenav").style.height = "0";
 }
 
-// Opens outside pages in new tabe
-$(document).ready(function () {
-
-    $("a[href^=http]").each(function () {
+// Open external links in a new window or tab.
+function ready(fn) {
+    if (document.readyState != 'loading') {
+      fn();
+    } else if (document.addEventListener) {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      document.attachEvent('onreadystatechange', function () {
+        if (document.readyState != 'loading')
+          fn();
+      });
+    }
+  }
   
-      // NEW - excluded domains list
-      var excludes = [
-        'excludeddomain1.com',
-        'excludeddomain2.com',
-        'excluded.subdomain.com'
-      ];
-      for (i = 0; i < excludes.length; i++) {
-        if (this.href.indexOf(excludes[i]) != -1) {
-          return true; // continue each() with next link
-        }
+  ready(function () {
+  
+    var website = window.location.hostname;
+  
+    var internalLinkRegex = new RegExp('^((((http:\\/\\/|https:\\/\\/)(www\\.)?)?'
+      + website
+      + ')|(localhost:\\d{4})|(\\/.*))(\\/.*)?$', '');
+  
+    var anchorEls = document.querySelectorAll('a');
+    var anchorElsLength = anchorEls.length;
+  
+    for (var i = 0; i < anchorElsLength; i++) {
+      var anchorEl = anchorEls[i];
+      var href = anchorEl.getAttribute('href');
+  
+      if (!internalLinkRegex.test(href)) {
+        anchorEl.setAttribute('target', '_blank');
       }
-  
-      if (this.href.indexOf(location.hostname) == -1) {
-  
-        // attach a do-nothing event handler to ensure we can 'trigger' a click on this link
-        $(this).click(function () { return true; });
-  
-        $(this).attr({
-          target: "_blank",
-          title: "Opens in a new window"
-        });
-  
-        $(this).click(); // trigger it
-      }
-    })
+    }
   });
