@@ -33,9 +33,11 @@ figcaption {
 
 /* macrobox css */
 #mb_cad {
-    width: 100%;
-    height: 500px;
+    width: 70%;
+    height: 475px;
 }
+
+/* mobile stuff */
 
 @media screen and (max-width: 600px) {
     .image-spliter {
@@ -47,5 +49,12 @@ figcaption {
         margin-right: auto;
         margin-left: auto;
         width: 350px;
+    }
+    #mb_cad {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        height: 300px;
     }
 }
