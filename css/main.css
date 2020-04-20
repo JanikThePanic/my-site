@@ -18,6 +18,24 @@
     --text-max-width: 35vw;
 }
 
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray; 
+}
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 body {
     font-family: var(--font);
     background-color: var(--bg-color);
@@ -41,7 +59,7 @@ a:hover {
 
 /* page bodies */
 .page {
-    margin: 0 0 0 var(--nav-width);
+    margin: 0 0 5.5em var(--nav-width);
     max-width: var(--max-page-width);
 }
 
@@ -62,7 +80,7 @@ hr {
 /* mobile jazz */
 @media screen and (max-width: 600px) {
     .page {
-        margin: 80px 5% 15% 5%;
+        margin: 80px 5% 20% 5%;
         max-width: 100%;
     }
     p {
