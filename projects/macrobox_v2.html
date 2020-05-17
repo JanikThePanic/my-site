@@ -52,7 +52,8 @@
     </script>
 
     <!-- google ads -->
-    <script data-ad-client="ca-pub-4870923460783524" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-4870923460783524" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
@@ -85,23 +86,50 @@
 
         <h2>Overview</h2>
         <p>
-            
+            Things are simple.
+            <br>
+            The MacroBox v1 simply is designed in a non-functional manner. On top of that, it’s far too expensive. That
+            is why I made the cheap and dirty MacroBox v2. It is nothing special but a simple Arduino Micro wired to
+            some Cherry MX Bue Switches.
         </p>
+        <p>
+            I was planning to make a MacroBox Pro. That would have consisted of a PCB with an Atmega32u4, RGB LEDs, and
+            a custom-made GUI to program the switches. Unfortunately, I realized how many MacroPads are already in
+            existence and that the world simply doesn’t need another.
+        </p>
+
+        <img class="cm_img" src="../assets/macrobox_v2/r1.png" alt="Side View">
+        <figcaption>Figure 1. Render of non-tilted design</figcaption>
 
         <br>
 
         <h2>Printed Circuit Board</h2>
         <p>
-            The PCB for this project is 1.6mm thick and consists of two layers.
+            The MacroBox v2 is manually wired to save on cost.
             <br>
             The schematic can be found on <a href="https://easyeda.com/jk4abdl/MarcoBox-v2">EasyEDA</a>.
+        </p>
+
+        <p>
+            The circuit consists of an Arduino Micro, fourteen white 3mm LEDs, fourteen 100ohm resistors, and ten Cherry
+            MX Blue Switches. Yes, a resistor for each LED, it is in fact overkill.
+        </p>
+
+        <p>
+            The LEDs are wired in parallel. The LEDs are connected straight to the Arduino’s GND and 5V pins. Instead of
+            using a matrix, the four LEDs displaying the current mode are each connected to their own digital pin.
+        </p>
+        
+        <p>
+            Lastly, the Cherry MX Switches are also connected to their own pin. Why? There are enough pins. I ain’t
+            gotta be fancy.
         </p>
 
         <br>
 
         <h2>Code</h2>
         <p>
-           
+
         </p>
 
         <br>
@@ -115,9 +143,10 @@
         </p>
 
         <iframe scrolling='no' frameborder='0' allowfullscreen='true'
-            src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1348623&width=250&height=250&edraw=true'
-            id='mb_cad'></iframe>
-        <figcaption>Figure 3. Interactive CAD viewer of tilted design</figcaption>
+            src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1350201&width=250&height=250&edraw=true'
+            id="mb_cad"></iframe>
+        <figcaption>Figure 2. Interactive CAD viewer of tilted design</figcaption>
+        <figcaption>Notice: 3D ContentCentral wouldn’t accept the CAD as an assembly</figcaption>
 
         <br>
 
@@ -128,7 +157,9 @@
             <li>x10 <a href="https://www.mouser.ca/ProductDetail/540-MX1A-E1NN">Cherry MX Blue
                     Keyswitch - Plate Mount</a></li>
             <li>x1 <a href="https://store.arduino.cc/usa/arduino-micro">Arduino Micro</a></li>
-            <li>x4 <a href="https://www.homedepot.com/p/2-56-x-1-4-in-Grade-18-8-Stainless-Steel-Phillips-Drive-Flat-Head-Machine-Screws-25-Pack-9000225/311095322">2-56 Machine Screws 1/4 in</a></li>
+            <li>x4 <a
+                    href="https://www.homedepot.com/p/2-56-x-1-4-in-Grade-18-8-Stainless-Steel-Phillips-Drive-Flat-Head-Machine-Screws-25-Pack-9000225/311095322">2-56
+                    Machine Screws 1/4 in</a></li>
             <li>x14 <a href="https://www.mouser.ca/ProductDetail/593-VAOL-3MWY4">White Flangeless 3mm LEDs</a></li>
         </ul>
 
