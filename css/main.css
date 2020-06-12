@@ -43,7 +43,7 @@ body {
     font-size: 18px;
 }
 
-p {
+.page p {
     line-height: 160%;
     width: var(--text-max-width);
 }
