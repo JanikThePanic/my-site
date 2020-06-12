@@ -91,7 +91,7 @@ hr {
 /* mobile jazz */
 @media screen and (max-width: 600px) {
     .page {
-        margin: 80px 5% 20% 5%;
+        margin: 80px 5% 15% 5%;
         max-width: 100%;
     }
     p {
