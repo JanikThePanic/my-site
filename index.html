@@ -33,6 +33,8 @@
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <!-- navbar css -->
   <link rel="stylesheet" type="text/css" href="./css/nav.css">
+  <!-- modal css -->
+  <link rel="stylesheet" type="text/css" href="./css/modal.css">
 
   <!-- favicon (no good one yet)-->
   <!-- <link rel="shortcut icon" href="./icon.png" type="image/png"> -->
@@ -48,11 +50,12 @@
   </script>
 
   <!-- google ads -->
-  <script data-ad-client="ca-pub-4870923460783524" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-4870923460783524" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
-<body>
+<body onload="inWork()">
 
   <!-- navbar -->
   <nav id="mySidenav" class="nav">
@@ -71,22 +74,40 @@
   <span onclick="openNav()"><img class="openbtn" src="./assets/iconfinder_menu-alt_134216.svg" alt=""></span>
   <div class="btnbox"></div>
 
-  <!-- page content begins here -->
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="closeM">&times;</span>
+        <h2>Website Under Development</h2>
+      </div>
+      <div class="modal-body">
+        <p>Just a heads up that this website is in constant development and many things may not fully work. Currently,
+          the Work and Thoughts pages aren’t functioning, along with many projects.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- page content begins here -->
   <div class="page">
 
     <h1 class="page-title">Jahangir Abdullayev</h1>
 
     <p>My name is Jahangir Abdullayev, Janik for short. I am a Canadian Highschool student at <a
         href="http://bci.wrdsb.ca/">Bluevale
-        Collegiate Institute</a>. As well, I am an engineering, design, and programming enthusiast. In time, I have also
+        Collegiate Institute</a>. As well, I am an engineering, design, and programming enthusiast. In time, I have
+      also
       become a leading student on <a href="https://2702rebels.com/">The 2702 Rebels.</a></p>
 
     <p>I created <a href="https://janikthepanic.github.io/the-repository/">the repository</a>, a grant
       bookmark. More importantly, over the years I have built multiple advanced competitive robots with the <a
         href="https://2702rebels.com/">2702 Rebels</a> Team.</p>
 
-    <p>Living in Canada, I know three languages. These are Russian, English, and a work-place level of French. On top of
+    <p>Living in Canada, I know three languages. These are Russian, English, and a work-place level of French. On top
+      of
       that, I am learning Japanese.</p>
 
     <p>Throughout high school, I have worked for <a href="https://uwaterloo.ca/engineering-science-quest/">Engineering

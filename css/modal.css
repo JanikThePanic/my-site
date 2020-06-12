@@ -1,0 +1,53 @@
+/* css for the modal saying im still working on the site */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 110; /* Sit on top */
+    padding-top: 20vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background:rgba(255,255,255, 0.5);
+    backdrop-filter: blur(1px);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  /* The Close Button */
+  .closeM {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeM:hover,
+  .closeM:focus {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 2px 16px;
+    background-color: var(--m-color);
+    color: white;
+  }
+
+  .modal-body {
+    padding: 2px 16px;
+    margin: auto;
+    width: 85%;
+    text-align: center;
+}
