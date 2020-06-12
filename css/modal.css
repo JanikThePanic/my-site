@@ -11,7 +11,11 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background:rgba(255,255,255, 0.5);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(5px);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
   }
   
   /* Modal Content */
@@ -21,12 +25,12 @@
     margin: auto;
     padding: 0;
     width: 55%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.2);
   }
   
   /* The Close Button */
   .closeM {
-    color: white;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -40,14 +44,21 @@
   }
 
   .modal-header {
-    padding: 2px 16px;
-    background-color: var(--m-color);
-    color: white;
+    padding: 2px 16px 0 16px;
   }
 
   .modal-body {
-    padding: 2px 16px;
+    margin-top: -1em;
+    padding: 0 16px 2px 16px;
     margin: auto;
-    width: 85%;
-    text-align: center;
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
