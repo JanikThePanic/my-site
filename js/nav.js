@@ -3,13 +3,11 @@
 // the fuction takes in the name of the attribute we'll be looking for
 function includeHTML(lookingFor) {
   var allElements = document.getElementsByTagName("*"); // pulls all elements from html
-  var element; // will store the element in which the attribute "file" is stored
   var file; // will store the location of the html we're pulling in
   var xhttp; // will be the XMLHttpRequest
 
   // will loop through all the elements until it find one with the attribute "file"
-  for (i = 0; i < allElements.length; i++) {
-    element = allElements[i]; // sets "element" to the current element we're running through
+  for (const element of allElements) {
     file = element.getAttribute(lookingFor); // sets "file" to the attribute "file" of the current element
 
     // if the current element HAS a "file", it will not be null, and thereby will run the if
