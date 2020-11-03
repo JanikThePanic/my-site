@@ -54,15 +54,11 @@
 
 </head>
 
-<body onload="inWork()">
+<!-- load navbar and modal -->
+<body onload="inWork(); includeHTML('file')">
 
   <!-- load navbar -->
-  <div file="/assets/nav.html"></div>
-
-  <script>
-    includeHTML('file');
-  </script>
-  <!-- load navbar done -->
+  <include file="/assets/nav.html"></include>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">

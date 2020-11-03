@@ -52,20 +52,15 @@
 
 </head>
 
-<body>
-
-  <!-- load navbar -->
-  <div file="/assets/nav.html"></div>
-
-  <script>
-    includeHTML('file');
-  </script>
-  <!-- load navbar done -->
+<body onload="includeHTML('file')">
+    
+  <!-- include navbar -->
+  <include file="/assets/nav.html"></include>
 
   <!-- page content begins here -->
   <div class="page">
 
-    <h1 class="page-title">Classic Error 404</h1>
+    <h1 class="page-title">Error 404</h1>
 
     <p>You appear lost.</p>
     <p>This page does not seam to exist.</p>
