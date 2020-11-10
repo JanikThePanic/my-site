@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- there are thoughts, containing entries, which has a title, category, date i finished it, rating, publishing year, auther, and finally my thought about it-->
+<!--  -->
+
+<thoughts>
+    <entry>
+        <title>Example Title</title>
+        <image>Example Link</image>
+        <type>Example Anime</type>
+        <date>December 17, 1995</date>
+        <rating>2.5</rating>
+        <published>1920</published>
+        <creator>Jules Verne</creator>
+        <thought>You know this was cool and all but I think, You know this was cool and all but I think, You know this was cool and all but I think, You know this was cool and all but I think, You know this was cool and all but I think, You know this was cool and all but I think, </thought>
+    </entry>
+</thoughts>
