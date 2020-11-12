@@ -1,0 +1,111 @@
+/* css for the thoughts page */
+
+/* need to cancel some root stuff */
+
+.page {
+    max-width: 100%;
+}
+
+p{
+    line-height: normal !important;
+    width: auto !important;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/* the entry has the image and text side */
+
+#NotnowThoughtsGoHere {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.entry {
+    display: flex;
+    flex: 1 0 42%;
+    max-width: 49%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.entry div {
+    margin-bottom: 0.3rem;
+}
+
+.entry p {
+    max-width: 95%;
+}
+
+/* image side */
+
+.image_div {
+    flex: 0.2;
+    margin: 0 1rem 0.5rem 0;
+}
+
+.image {
+    border-radius: 6%;
+    width: 100%;
+}
+
+/* text side */
+
+.text_div {
+    flex: 0.9;
+}
+
+.title {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.type_date {
+    font-weight: bold;
+    display: flex;
+    font-size: 1rem;
+}
+
+.date {
+    color: #e66622;
+}
+
+.rating {
+    display: flex;
+}
+
+/* ratings */
+
+.stars {
+    width: 1rem;
+}
+
+.star {
+    stroke-width: 7%;
+    stroke: black;
+}
+
+.empty {
+    fill: white;
+}
+
+.full {
+    fill: black;
+}
+
+/* none of that now */
+
+.published_creator{
+    display: flex;
+    color: var(--m-color);
+    font-weight: bold;
+}
+
+.thought {
+    overflow: hidden;
+    max-height: 4.5rem;
+}
