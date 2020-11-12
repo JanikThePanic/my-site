@@ -17,7 +17,7 @@ p{
 
 /* the entry has the image and text side */
 
-#NotnowThoughtsGoHere {
+#ThoughtsGoHere {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -26,7 +26,7 @@ p{
 .entry {
     display: flex;
     flex: 1 0 42%;
-    max-width: 49%;
+    max-width: 48%;
     padding-bottom: 1rem;
     border-bottom: 1px solid lightgray;
     margin-right: 2rem;
@@ -107,5 +107,37 @@ p{
 
 .thought {
     overflow: hidden;
-    max-height: 4.5rem;
+    max-height: 4em;
+}
+
+/* mobile jazz */
+@media screen and (max-width: 1400px) {
+    .entry {
+        max-width: 100%;
+        margin-right: 0px;
+    }
+
+    .image_div {
+        flex: 0.3;
+    }
+
+    .entry p {
+        font-size: 0.8em;
+    }
+    
+    .title {
+        font-size: 1.2em !important;
+    }
+
+    #ThoughtsGoHere {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .thought {
+        overflow: hidden;
+        max-height: 4em;
+    }
 }

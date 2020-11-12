@@ -36,7 +36,7 @@ function loadEntries(xml) {
         pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue +
         "</td></tr>";
     }
-    document.getElementById("ThoughtsGoHere").innerHTML = loaded;
+    document.getElementById("noThoughtsGoHere").innerHTML = loaded;
     // by default sort the table by latest thought
     //sortTable(0);
 }
