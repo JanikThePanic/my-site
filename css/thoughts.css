@@ -217,7 +217,7 @@ p{
     background-color: var(--white);
     fill: var(--color_all);
 }
-.sort_all:hover {
+.sort_all.active, .sort_all:hover {
     color: var(--white);
     background-color: var(--color_all);
     fill: var(--white);
@@ -228,7 +228,7 @@ p{
     background-color: var(--white);
     fill: var(--color_movies);
 }
-.sort_movies:hover{
+.sort_movies.active, .sort_movies:hover{
     color: var(--white);
     background-color: var(--color_movies);
     fill: var(--white);
@@ -239,7 +239,7 @@ p{
     background-color: var(--white);
     fill: var(--color_anime);
 }
-.sort_anime:hover{
+.sort_anime.active, .sort_anime:hover{
     color: var(--white);
     background-color: var(--color_anime);
     fill: var(--white);
@@ -250,7 +250,7 @@ p{
     background-color: var(--white);
     fill: var(--color_tv);
 }
-.sort_tv:hover{
+.sort_tv.active, .sort_tv:hover{
     color: var(--white);
     background-color: var(--color_tv);
     fill: var(--white);
@@ -261,7 +261,7 @@ p{
     background-color: var(--white);
     fill: var(--color_books);
 }
-.sort_books:hover{
+.sort_books.active, .sort_books:hover{
     color: var(--white);
     background-color: var(--color_books);
     fill: var(--white);
@@ -272,7 +272,7 @@ p{
     background-color: var(--white);
     fill: var(--color_music);
 }
-.sort_music:hover{
+.sort_music.active, .sort_music:hover{
     color: var(--white);
     background-color: var(--color_music);
     fill: var(--white);
