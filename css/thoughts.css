@@ -142,10 +142,64 @@ p{
         overflow: hidden;
         max-height: 4em;
     }
+
     .stars {
         width: 0.8rem;
     }
+
     .entry div {
         margin-bottom: 0.2rem;
     }
+}
+
+/* here we got the sorting css */
+
+:root {
+    --color_all: #1e272e;
+    --color_movies: #0abde3;
+    --color_anime: #a6c44e;
+    --color_tv: #ff9f43;
+    --color_books: #d65858;
+    --color_music: #d467c6;
+    --white: #ffffff;
+}
+
+.sorting span {
+    display: block;
+    float: left;
+    padding: 4px 6px 4px 6px;
+    margin-right: 4px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.sort_all {
+    border: 2px solid var(--color_all);
+    color: var(--color_all);
+    background-color: var(--white);
+}
+.sort_movies {
+    border: 2px solid var(--color_movies);
+    color: var(--color_movies);
+    background-color: var(--white);
+}
+.sort_anime {
+    border: 2px solid var(--color_anime);
+    color: var(--color_anime);
+    background-color: var(--white);
+}
+.sort_tv {
+    border: 2px solid var(--color_tv);
+    color: var(--color_tv);
+    background-color: var(--white);
+}
+.sort_books {
+    border: 2px solid var(--color_books);
+    color: var(--color_books);
+    background-color: var(--white);
+}
+.sort_music {
+    border: 2px solid var(--color_music);
+    color: var(--color_music);
+    background-color: var(--white);
 }
