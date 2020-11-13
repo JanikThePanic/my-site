@@ -112,8 +112,31 @@ p{
     max-height: 4em;
 }
 
-/* mobile jazz */
 @media screen and (max-width: 1400px) {
+    .image_div {
+        flex: 0.5;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .image_div {
+        flex: 0.3;
+    }
+    .entry {
+        max-width: 100%;
+        margin-right: 0px;
+    }
+    #ThoughtsGoHere {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+    }
+}
+
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
     .entry {
         max-width: 100%;
         margin-right: 0px;
@@ -168,9 +191,10 @@ p{
     display: block;
     float: left;
     padding: 4px 6px 4px 6px;
-    margin-right: 4px;
+    margin: 0 4px 4px 0;
     border-radius: 4px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .sort_all {
