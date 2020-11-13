@@ -15,8 +15,6 @@ p{
     margin-inline-end: 0;
 }
 
-/* sorting and filtering controls */
-
 /* the entry has the image and text side */
 
 #ThoughtsGoHere {
@@ -177,6 +175,12 @@ p{
 
 /* here we got the sorting css */
 
+.sorting {
+    display: block;
+    min-height: 2em;
+    min-width: 100%;
+}
+
 :root {
     --color_all: #1e272e;
     --color_movies: #0abde3;
@@ -187,11 +191,21 @@ p{
     --white: #ffffff;
 }
 
+.sort_icons {
+    width: 1em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sorting p { 
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .sorting span {
-    display: block;
     float: left;
     padding: 4px 6px 4px 6px;
-    margin: 0 4px 4px 0;
+    margin: 0 5px 5px 0;
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
@@ -201,29 +215,65 @@ p{
     border: 2px solid var(--color_all);
     color: var(--color_all);
     background-color: var(--white);
+    fill: var(--color_all);
+}
+.sort_all:hover {
+    color: var(--white);
+    background-color: var(--color_all);
+    fill: var(--white);
 }
 .sort_movies {
     border: 2px solid var(--color_movies);
     color: var(--color_movies);
     background-color: var(--white);
+    fill: var(--color_movies);
+}
+.sort_movies:hover{
+    color: var(--white);
+    background-color: var(--color_movies);
+    fill: var(--white);
 }
 .sort_anime {
     border: 2px solid var(--color_anime);
     color: var(--color_anime);
     background-color: var(--white);
+    fill: var(--color_anime);
+}
+.sort_anime:hover{
+    color: var(--white);
+    background-color: var(--color_anime);
+    fill: var(--white);
 }
 .sort_tv {
     border: 2px solid var(--color_tv);
     color: var(--color_tv);
     background-color: var(--white);
+    fill: var(--color_tv);
+}
+.sort_tv:hover{
+    color: var(--white);
+    background-color: var(--color_tv);
+    fill: var(--white);
 }
 .sort_books {
     border: 2px solid var(--color_books);
     color: var(--color_books);
     background-color: var(--white);
+    fill: var(--color_books);
+}
+.sort_books:hover{
+    color: var(--white);
+    background-color: var(--color_books);
+    fill: var(--white);
 }
 .sort_music {
     border: 2px solid var(--color_music);
     color: var(--color_music);
     background-color: var(--white);
+    fill: var(--color_music);
+}
+.sort_music:hover{
+    color: var(--white);
+    background-color: var(--color_music);
+    fill: var(--white);
 }
