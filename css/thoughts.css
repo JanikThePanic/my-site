@@ -197,12 +197,12 @@ p{
     vertical-align: middle;
 }
 
-.sorting p { 
+.btn p { 
   vertical-align: middle;
   display: inline-block;
 }
 
-.sorting span {
+.btn {
     float: left;
     padding: 4px 6px 4px 6px;
     margin: 0 5px 5px 0;
