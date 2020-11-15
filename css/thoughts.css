@@ -21,6 +21,8 @@ p{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    float: left;
+    clear: both;
 }
 
 .entry {
@@ -110,6 +112,11 @@ p{
     max-height: 4em;
 }
 
+.expand {
+    overflow: visible !important;
+    max-height: none !important;
+}
+
 @media screen and (max-width: 1400px) {
     .image_div {
         flex: 0.5;
@@ -157,11 +164,6 @@ p{
         width: 100%;
         flex-direction: column;
         margin: 0px;
-    }
-
-    .thought {
-        overflow: hidden;
-        max-height: 4em;
     }
 
     .stars {
