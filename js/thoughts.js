@@ -67,7 +67,7 @@ function loadEntries(xml) {
 
         image = "<div class=\"image_div\"><img class=\"image\" src=\"" + pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "\"></div>";
         title = "<p class=\"title\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</p>";
-        type = "<div class=\"type_date\"><p>" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue + "</p><p>&nbsp · &nbsp</p>";
+        type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue + "</p><p>&nbsp · &nbsp</p>";
         date = "<p class=\"date\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</p></div>";
         rating = "<div class=\"rating\" value=\"" + rating_value + "\">" + stars + "</div>";
         published = "<div class=\"published_creator\"><p>" + pulledData[i].getElementsByTagName("published")[0].childNodes[0].nodeValue + "</p><p>&nbsp | &nbsp</p>";
@@ -88,10 +88,10 @@ function loadEntries(xml) {
 
     for (var i = 0; i < thoughts.length; i++) {
         thoughts[i].addEventListener("click", function () {
-            console.log("click");
+            // if the thought is already expanded nothings happens
             if (this.classList.contains("expand")) {
-                console.log("nothing to do here");
             }
+            // if not it gets expanded
             else {
                 this.className += "expand";
             }
@@ -106,7 +106,59 @@ function loadEntries(xml) {
             var current = document.getElementsByClassName("active");
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
+
+            // based on what class is in the span, itll filter by that type by calling the  filterThoughts function
+            if (this.classList.contains("sort_all")) {
+                filterThoughts("all");
+            }
+            else if (this.classList.contains("sort_movies")) {
+                filterThoughts("movie");
+            }
+            else if (this.classList.contains("sort_anime")) {
+                filterThoughts("anime");
+            }
+            else if (this.classList.contains("sort_tv")) {
+                filterThoughts("tv");
+            }
+            else if (this.classList.contains("sort_books")) {
+                filterThoughts("book");
+            }
+            else if (this.classList.contains("sort_music")) {
+                filterThoughts("music");
+            }
+
         });
     }
 
+}
+
+// function that filters by the type of entry
+function filterThoughts(filterBy) {
+
+    // pulls all entries
+    var entries = document.getElementsByClassName("entry");
+
+    // loops thru them all
+    for (var i = 0; i < entries.length; i++) {
+
+        // if we're filtering by "all" we need to show all
+        if (filterBy == "all") {
+            entries[i].style.display = "";
+        }
+
+        // if we're filtering anything else, then ...
+        else {
+            // gets the p element holding the type
+            var type = entries[i].getElementsByClassName("TypeClass")[0];
+
+            // if it matchs what we are filtering by it stays
+            if (type.innerHTML.toString().toLowerCase() == filterBy) {
+                entries[i].style.display = "";
+            }
+            // else it will just be gone
+            else {
+                entries[i].style.display = "none";
+            }
+        }
+    }
 }

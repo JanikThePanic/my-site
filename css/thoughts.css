@@ -28,7 +28,7 @@ p{
 .entry {
     display: flex;
     flex: 1 0 42%;
-    max-width: 48%;
+    max-width: 47%;
     padding-bottom: 1rem;
     border-bottom: 1px solid lightgray;
     margin-right: 2rem;
