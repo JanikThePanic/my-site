@@ -112,6 +112,12 @@ p{
     max-height: 4em;
 }
 
+ .thought:hover:not(.expand) {
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .expand {
     overflow: visible !important;
     max-height: none !important;

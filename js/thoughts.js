@@ -45,7 +45,9 @@ function loadEntries(xml) {
         var star_count = 0;
         var rating_value = parseFloat(pulledData[i].getElementsByTagName("rating")[0].childNodes[0].nodeValue);
         var rating_temp = rating_value;
+        var date_formated = "";
 
+        // renders the stars instead of a number
         while (star_count < 5) {
             if (rating_temp >= 1) {
                 stars += star_full;
@@ -73,20 +75,38 @@ function loadEntries(xml) {
         thought = "<p class=\"thought\">" + pulledData[i].getElementsByTagName("thought")[0].childNodes[0].nodeValue + "</p>";
 
         loaded += "<div class=\"entry\">" + image + "<div class=\"text_div\">" + title + type + date + rating + published + creator + thought + "</div></div>";
-        console.log(loaded);
     }
     document.getElementById("ThoughtsGoHere").innerHTML += loaded;
     // by default sort the table by latest thought
     //sortTable(0);
-}
 
-// for when buttons are clicked
-var buttons = document.getElementsByClassName("btn");
 
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
+    // putting the click detections here as some may need the loaded xml first
+
+    // for when paragraphs are clicked and need to be expanded
+    var thoughts = document.getElementsByClassName("thought");
+
+    for (var i = 0; i < thoughts.length; i++) {
+        thoughts[i].addEventListener("click", function () {
+            console.log("click");
+            if (this.classList.contains("expand")) {
+                console.log("nothing to do here");
+            }
+            else {
+                this.className += "expand";
+            }
+        });
+    }
+
+    // for when buttons are clicked
+    var buttons = document.getElementsByClassName("btn");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
 }
