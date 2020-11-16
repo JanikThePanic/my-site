@@ -93,7 +93,7 @@ function loadEntries(xml) {
             }
             // if not it gets expanded
             else {
-                this.className += "expand";
+                this.className += " expand";
             }
         });
     }
@@ -134,6 +134,8 @@ function loadEntries(xml) {
 
 // function that filters by the type of entry
 function filterThoughts(filterBy) {
+    // clear expanded thoughts (just looks better)
+    clearExpanded();
 
     // pulls all entries
     var entries = document.getElementsByClassName("entry");
@@ -159,6 +161,20 @@ function filterThoughts(filterBy) {
             else {
                 entries[i].style.display = "none";
             }
+        }
+    }
+}
+
+// function that unexpanded currently expanded thoughts
+function clearExpanded() {
+    // pulls the thoughts
+    var thoughts = document.getElementsByClassName("thought");
+
+    // loops thru them
+    for (var i = 0; i < thoughts.length; i++) {
+        // if a thought has expand in it, it'll replace it with nothing
+        if (thoughts[i].classList.contains("expand")) {
+            thoughts[i].className = thoughts[i].className.replace(" expand", "");
         }
     }
 }
