@@ -5,9 +5,9 @@
 <thoughts>
     <entry>
         <title>Example Title</title>
-        <image>https://cdn.myanimelist.net/images/anime/1314/108941.jpg</image>
+        <image>https://cdn.myanimelist.net/images/anime/1584/104517l.webp</image>
         <type>Anime</type>
-        <date>December 17, 1995</date>
+        <date>June 17, 1995</date>
         <rating>2</rating>
         <published>1920</published>
         <creator>Jules Verne</creator>
@@ -17,7 +17,7 @@
         <title>Example Title</title>
         <image>https://cdn.myanimelist.net/images/anime/1314/108941.jpg</image>
         <type>Book</type>
-        <date>December 17, 1995</date>
+        <date>May 2, 2001</date>
         <rating>4.5</rating>
         <published>1920</published>
         <creator>Jules Verne</creator>
@@ -25,9 +25,9 @@
     </entry>
     <entry>
         <title>Example Title</title>
-        <image>https://cdn.myanimelist.net/images/anime/1314/108941.jpg</image>
+        <image>https://cdn.myanimelist.net/images/anime/9/79524l.webp</image>
         <type>Movie</type>
-        <date>December 17, 1995</date>
+        <date>January 30, 2003</date>
         <rating>4</rating>
         <published>1920</published>
         <creator>Jules Verne</creator>
@@ -35,9 +35,9 @@
     </entry>
     <entry>
         <title>Example Title</title>
-        <image>https://cdn.myanimelist.net/images/anime/1314/108941.jpg</image>
+        <image>https://cdn.myanimelist.net/images/anime/13/50521l.webp</image>
         <type>Music</type>
-        <date>December 17, 1995</date>
+        <date>January 31, 2003</date>
         <rating>3</rating>
         <published>1920</published>
         <creator>Jules Verne</creator>

@@ -68,7 +68,7 @@ function loadEntries(xml) {
         image = "<div class=\"image_div\"><img class=\"image\" src=\"" + pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "\"></div>";
         title = "<p class=\"title\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</p>";
         type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue + "</p><p>&nbsp · &nbsp</p>";
-        date = "<p class=\"date\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</p></div>";
+        date = "<p class=\"date\" value=\"" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</p></div>";
         rating = "<div class=\"rating\" value=\"" + rating_value + "\">" + stars + "</div>";
         published = "<div class=\"published_creator\"><p>" + pulledData[i].getElementsByTagName("published")[0].childNodes[0].nodeValue + "</p><p>&nbsp | &nbsp</p>";
         creator = "<p>" + pulledData[i].getElementsByTagName("creator")[0].childNodes[0].nodeValue + "</p></div>";
@@ -77,8 +77,8 @@ function loadEntries(xml) {
         loaded += "<div class=\"entry\">" + image + "<div class=\"text_div\">" + title + type + date + rating + published + creator + thought + "</div></div>";
     }
     document.getElementById("ThoughtsGoHere").innerHTML += loaded;
-    // by default sort the table by latest thought
-    //sortTable(0);
+    // on load sort the table by latest thought
+    sortThoughts();
 
 
     // putting the click detections here as some may need the loaded xml first
@@ -194,21 +194,21 @@ function sortThoughts() {
         sortBy = sortValue;
         order = "desc";
     }
-    else if (sortValue == "rating_desc") {
-        sortBy = "rating";
-        order = "desc";
-    }
     else if (sortValue == "rating_asc") {
         sortBy = "rating";
         order = "asc";
     }
-    else if (sortValue == "date_desc") {
+    else if (sortValue == "rating_desc") {
         sortBy = "rating";
         order = "desc";
     }
     else if (sortValue == "date_asc") {
-        sortBy = "date";
+        sortBy = "rating";
         order = "asc";
+    }
+    else if (sortValue == "date_desc") {
+        sortBy = "date";
+        order = "desc";
     }
 
     // some varibles we'll need
@@ -236,17 +236,22 @@ function sortThoughts() {
                 currentEntry = parseFloat(entries[entryNum].getElementsByClassName("rating")[0].getAttribute("value"));
                 nextEntry = parseFloat(entries[entryNum + 1].getElementsByClassName("rating")[0].getAttribute("value"));
             }
+            // if date
+            else if (sortBy == "review_date") {
+                currentEntry = Date.parse(entries[entryNum].getElementsByClassName("date")[0].getAttribute("value"))
+                nextEntry = Date.parse(entries[entryNum + 1].getElementsByClassName("date")[0].getAttribute("value"))
+            }
 
             // if we're doing ascending order
             if (order == "asc") {
-                if (currentEntry < nextEntry) {
+                if (currentEntry > nextEntry) {
                     // if this is true, means we need to to place the current one above the next one
                     shouldSwitch = true;
                     break;
                 }
             }
             if (order == "desc") {
-                if (currentEntry > nextEntry) {
+                if (currentEntry < nextEntry) {
                     // if this is true, means we need to to place the current one above the next one
                     shouldSwitch = true;
                     break;
@@ -257,9 +262,6 @@ function sortThoughts() {
         if (shouldSwitch) {
             entries[entryNum].parentNode.insertBefore(entries[entryNum + 1], entries[entryNum]);
             switching = true;
-        }
-        else {
-            
         }
     }
 }
