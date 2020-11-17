@@ -70,7 +70,7 @@ function loadEntries(xml) {
         type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue + "</p><p>&nbsp · &nbsp</p>";
         date = "<p class=\"date\" value=\"" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</p></div>";
         rating = "<div class=\"rating\" value=\"" + rating_value + "\">" + stars + "</div>";
-        published = "<div class=\"published_creator\"><p>" + pulledData[i].getElementsByTagName("published")[0].childNodes[0].nodeValue + "</p><p>&nbsp | &nbsp</p>";
+        published = "<div class=\"published_creator\"><p class=\"published\">" + pulledData[i].getElementsByTagName("published")[0].childNodes[0].nodeValue + "</p><p>&nbsp | &nbsp</p>";
         creator = "<p>" + pulledData[i].getElementsByTagName("creator")[0].childNodes[0].nodeValue + "</p></div>";
         thought = "<p class=\"thought\">" + pulledData[i].getElementsByTagName("thought")[0].childNodes[0].nodeValue + "</p>";
 
@@ -203,7 +203,7 @@ function sortThoughts() {
         order = "desc";
     }
     else if (sortValue == "date_asc") {
-        sortBy = "rating";
+        sortBy = "date";
         order = "asc";
     }
     else if (sortValue == "date_desc") {
@@ -238,8 +238,12 @@ function sortThoughts() {
             }
             // if date
             else if (sortBy == "review_date") {
-                currentEntry = Date.parse(entries[entryNum].getElementsByClassName("date")[0].getAttribute("value"))
-                nextEntry = Date.parse(entries[entryNum + 1].getElementsByClassName("date")[0].getAttribute("value"))
+                currentEntry = Date.parse(entries[entryNum].getElementsByClassName("date")[0].getAttribute("value"));
+                nextEntry = Date.parse(entries[entryNum + 1].getElementsByClassName("date")[0].getAttribute("value"));
+            }
+            else if (sortBy == "date") {
+                currentEntry = entries[entryNum].getElementsByClassName("published")[0].innerHTML;
+                nextEntry = entries[entryNum + 1].getElementsByClassName("published")[0].innerHTML;
             }
 
             // if we're doing ascending order
