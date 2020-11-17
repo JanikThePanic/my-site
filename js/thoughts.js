@@ -178,3 +178,88 @@ function clearExpanded() {
         }
     }
 }
+
+function sortThoughts() {
+    // clear expanded thoughts (just looks better)
+    clearExpanded();
+
+    // pulls the value we're soring by
+    var sortValue = document.getElementById("mySort").value;
+
+    var sortBy; // old what we're soring by
+    var order; // hold sort order
+
+    // based on the value of sort, we can make an order and sortby
+    if (sortValue == "review_date") {
+        sortBy = sortValue;
+        order = "desc";
+    }
+    else if (sortValue == "rating_desc") {
+        sortBy = "rating";
+        order = "desc";
+    }
+    else if (sortValue == "rating_asc") {
+        sortBy = "rating";
+        order = "asc";
+    }
+    else if (sortValue == "date_desc") {
+        sortBy = "rating";
+        order = "desc";
+    }
+    else if (sortValue == "date_asc") {
+        sortBy = "date";
+        order = "asc";
+    }
+
+    // some varibles we'll need
+    var entries = document.getElementsByClassName("entry"); // pulls all entries
+    var switching = true; // shows that we're still running through the entries
+    var shouldSwitch; // this var will hold whether or not a switch between two rows needs to be made
+    var entryNum; // will store what entry number we're at
+    var currentEntry; // will hold the current entry plain "text"
+    var nextEntry; // will hold the next entry plain "text"
+
+    while (switching) {
+        // set it that there is no switching done, this may be changed later
+        switching = false;
+
+        // run through all the entries, expect last, as at that point we wont be able to compare it to the next
+        for (entryNum = 0; entryNum < entries.length - 1; entryNum++) {
+            // state that there is need for switching at the moment
+            shouldSwitch  = false;
+
+            // compare current entry's whatever we're soring by and the next
+
+            // different elements for different sorts
+            // lets do rating first, its the easiest
+            if (sortBy == "rating") {
+                currentEntry = parseFloat(entries[entryNum].getElementsByClassName("rating")[0].getAttribute("value"));
+                nextEntry = parseFloat(entries[entryNum + 1].getElementsByClassName("rating")[0].getAttribute("value"));
+            }
+
+            // if we're doing ascending order
+            if (order == "asc") {
+                if (currentEntry < nextEntry) {
+                    // if this is true, means we need to to place the current one above the next one
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (order == "desc") {
+                if (currentEntry > nextEntry) {
+                    // if this is true, means we need to to place the current one above the next one
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+
+        if (shouldSwitch) {
+            entries[entryNum].parentNode.insertBefore(entries[entryNum + 1], entries[entryNum]);
+            switching = true;
+        }
+        else {
+            
+        }
+    }
+}

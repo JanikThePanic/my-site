@@ -151,12 +151,12 @@
       <!-- the dropdown for sorting -->
       <div class="sort">
         <label>Sort by: &nbsp</label>
-        <select class="select">
-          <option value="Option 1">Review Date</option>
-          <option value="Option 2">Highest Rating</option>
-          <option value="Option 3">Lowest Rating</option>
-          <option value="Option 4">Newest</option>
-          <option value="Option 5">Oldest</option>
+        <select id="mySort" onchange="sortThoughts()">
+          <option value="review_date" selected="selected">Review Date</option>
+          <option value="rating_asc">Highest Rating</option>
+          <option value="rating_desc">Lowest Rating</option>
+          <option value="date_asc">Newest</option>
+          <option value="date_desc">Oldest</option>
         </select>
       </div>
     </div>
