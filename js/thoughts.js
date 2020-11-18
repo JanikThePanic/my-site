@@ -65,15 +65,50 @@ function loadEntries(xml) {
             }
         }
 
+        // instead of stating the exact date, we'll grab todays date and do a relative statement of when the review was made
+        var today = new Date();
+        var reviewedDate = Date.parse(pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
+        var diffTime = Math.abs(today-reviewedDate);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        // if the review was made that day, day before, that week, week before that, that month, month before that, within 6 months, and if older than that, just the day
+        if (diffDays <= 1) {
+            date_formated = "Today";
+        }
+        else if (diffDays <= 2) {
+            date_formated = "Yesterday";
+        }
+        else if (diffDays <= 7) {
+            date_formated = "This Week";
+        }
+        else if (diffDays <= 14) {
+            date_formated = "Last Week";
+        }
+        else if (diffDays <= 30) {
+            date_formated = "This Month";
+        }
+        else if (diffDays <= 60) {
+            date_formated = "Last Month";
+        }
+        else if (diffDays <= 182) {
+            var monthsOld = Math.ceil(Math.abs(diffDays/30));
+            date_formated = monthsOld + " Months Ago";
+        }
+        else {
+            date_formated = pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
+        }
+
+        // lets put the things into their varibles
         image = "<div class=\"image_div\"><img class=\"image\" src=\"" + pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "\"></div>";
         title = "<p class=\"title\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</p>";
-        type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue + "</p><p>&nbsp · &nbsp</p>";
-        date = "<p class=\"date\" value=\"" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "</p></div>";
+        type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toUpperCase() + "</p><p>&nbsp · &nbsp</p>";
+        date = "<p class=\"date\" value=\"" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "\">" + date_formated.toUpperCase() + "</p></div>";
         rating = "<div class=\"rating\" value=\"" + rating_value + "\">" + stars + "</div>";
         published = "<div class=\"published_creator\"><p class=\"published\">" + pulledData[i].getElementsByTagName("published")[0].childNodes[0].nodeValue + "</p><p>&nbsp | &nbsp</p>";
         creator = "<p>" + pulledData[i].getElementsByTagName("creator")[0].childNodes[0].nodeValue + "</p></div>";
         thought = "<p class=\"thought\">" + pulledData[i].getElementsByTagName("thought")[0].childNodes[0].nodeValue + "</p>";
 
+        // put it all together
         loaded += "<div class=\"entry\">" + image + "<div class=\"text_div\">" + title + type + date + rating + published + creator + thought + "</div></div>";
     }
     document.getElementById("ThoughtsGoHere").innerHTML += loaded;
