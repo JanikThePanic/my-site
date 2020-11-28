@@ -51,7 +51,7 @@
     <!-- navbar css -->
     <link rel="stylesheet" type="text/css" href="/css/nav.css">
     <!-- projects css -->
-    <link rel="stylesheet" type="text/css" href="/projects/projects.css">
+    <link rel="stylesheet" type="text/css" href="/css/projects.css">
 
 </head>
 
@@ -65,8 +65,8 @@
     <div class="page">
 
         <h1 class="page-title">MacroBox <sup>v2.0</sup></h1>
-        <p style="font-style:italic;">All files available on <a
-                href="https://github.com/JanikThePanic/macrobox-v2" target="_blank">GitHub</a>.</p>
+        <p style="font-style:italic;">All files available on <a href="https://github.com/JanikThePanic/macrobox-v2"
+                target="_blank">GitHub</a>.</p>
 
         <h2>Overview</h2>
         <p>
@@ -82,12 +82,15 @@
             existence and that the world simply doesn’t need another.
         </p>
 
-        <img class="cm_img" src="../assets/macrobox_v2/r1.png" alt="Side View">
+        <img class="def_img" src="/assets/macrobox_v2/r1.png" alt="Side View">
         <figcaption>Figure 1. Render of non-tilted design</figcaption>
+        <br>
+        <img class="def_img" src="/assets/macrobox_v2/fp1.jpg" alt="Side View">
+        <figcaption>Figure 2. Final Product</figcaption>
 
         <br>
 
-        <h2>Printed Circuit Board</h2>
+        <h2>Circuit</h2>
         <p>
             The MacroBox v2 is manually wired to save on cost.
             <br>
@@ -95,7 +98,7 @@
         </p>
 
         <p>
-            The circuit consists of an Arduino Micro, fourteen white 3mm LEDs, fourteen 100ohm resistors, and ten Cherry
+            The circuit consists of an Arduino Micro, fourteen white 3mm LEDs, fourteen 100Ω resistors, and ten Cherry
             MX Blue Switches. Yes, a resistor for each LED, it is in fact overkill.
         </p>
 
@@ -113,7 +116,19 @@
 
         <h2>Code</h2>
         <p>
+            The code was written for the Arduino Micro using Arduino’s IDE then uploaded to the board. For the board to
+            replicate the actions of a keyboard, the <a href="https://github.com/NicoHood/HID/">Arduino HID Project
+                library created by NicoHood</a> was used.
+        </p>
 
+        <p>
+            The code is poorly written and very much spaghetti code. The structure is all over the place, with each mode
+            indicated by the LEDs being a separate function and each key being a case in a switch statement. Not ideal.
+        </p>
+
+        <p>
+            Overall, I would rewrite the code and make it nice and neat. As well, Visual Basics would be use to create a
+            GUI that would generate the code and upload it to the board automatically.
         </p>
 
         <br>
@@ -123,13 +138,15 @@
             The CAD is made in SolidWorks. If you need STLs, feel free to contact me.
         </p>
         <p>
-
+            There were two cases created, one with a titled surface, and one with a flat one. Personally, I preferred
+            having the buttons be on a little slant which is why I added a tilted case model. Besides that, the whole
+            thing was secured by four screws, one in each corner.
         </p>
 
         <iframe scrolling='no' frameborder='0' allowfullscreen='true'
             src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1350201&width=250&height=250&edraw=true'
-            id="mb_cad"></iframe>
-        <figcaption>Figure 2. Interactive CAD viewer of tilted design</figcaption>
+            id="def_cad"></iframe>
+        <figcaption>Figure 3. Interactive CAD viewer of tilted design</figcaption>
         <figcaption>Notice: 3D ContentCentral wouldn’t accept the CAD as an assembly</figcaption>
 
         <br>
@@ -142,23 +159,40 @@
                     Keyswitch - Plate Mount</a></li>
             <li>x1 <a href="https://store.arduino.cc/usa/arduino-micro" target="_blank">Arduino Micro</a></li>
             <li>x4 <a
-                    href="https://www.homedepot.com/p/2-56-x-1-4-in-Grade-18-8-Stainless-Steel-Phillips-Drive-Flat-Head-Machine-Screws-25-Pack-9000225/311095322" target="_blank">2-56
+                    href="https://www.homedepot.com/p/2-56-x-1-4-in-Grade-18-8-Stainless-Steel-Phillips-Drive-Flat-Head-Machine-Screws-25-Pack-9000225/311095322"
+                    target="_blank">2-56
                     Machine Screws 1/4 in</a></li>
-            <li>x14 <a href="https://www.mouser.ca/ProductDetail/593-VAOL-3MWY4" target="_blank">White Flangeless 3mm LEDs</a></li>
+            <li>x14 <a href="https://www.mouser.ca/ProductDetail/593-VAOL-3MWY4" target="_blank">White Flangeless 3mm
+                    LEDs</a></li>
         </ul>
 
         <br>
 
         <h2>Inspiration</h2>
         <p>
-
+            I just wanted to control the volume of my music while in-game and really needed to justify me getting my
+            hands on Cherry MX switches as well as a 3D Printer.
         </p>
 
         <br>
 
         <h2>Conclusion</h2>
         <p>
+            Do I use the MacroBox v2?
+            <br>
+            No, it’s in a drawer under my bed.
+            <figcaption>Also printed keycaps don’t feel the best and I’m not paying the shipping to buy just ten keycaps.</figcaption>
+        </p>
 
+        <p>
+            Did I think I needed it?
+            <br>
+            Yes. I thought that it would be convenient but turns out that I have already optimized.
+        </p>
+        <p>
+            Will I ever use it?
+            <br>
+            Probably if I start streaming or start using a software daily that allows me to create shortcuts.
         </p>
 
         <br>

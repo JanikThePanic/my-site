@@ -20,19 +20,22 @@
     font-weight: bold;
 }
 
+/* image cations */
 figcaption {
     font-style: italic;
     font-size: .75em;
     z-index: 100;
 }
 
-.cm_img {
+/* defualt image css */
+.def_img {
     width: 400px;
     margin-bottom: .5em;
+    border-radius: 8px;
 }
 
-/* macrobox css */
-#mb_cad {
+/* defualt cad css */
+#def_cad {
     width: 70%;
     height: 475px;
 }
@@ -44,13 +47,13 @@ figcaption {
         display: table;
         margin: .5em auto;
     }
-    .cm_img {
+    .def_img {
         display: block;
         margin-right: auto;
         margin-left: auto;
         width: 95%;
     }
-    #mb_cad {
+    #def_cad {
         display: block;
         margin-right: auto;
         margin-left: auto;
