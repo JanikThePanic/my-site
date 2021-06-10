@@ -1,0 +1,13 @@
+{
+	"project": {
+		"meta": {
+			"refName": "laika",
+			"title": "laika",
+			"version": "",
+			"description": "its a dog.",
+			"github":  "",
+			"otherLink": ["", ""]
+		},
+		"content": []
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"project": {
+		"meta": {
+			"refName": "macrobox_v2",
+			"title": "MacroBox",
+			"version": "v2.0",
+			"description": "The cheap and dirty version of the MacroBox v1.",
+			"github": "https://github.com/JanikThePanic/macrobox-v2",
+			"otherLink": ["", ""]
+		},
+		"content": [
+			{
+				"heading": "Overview",
+				"text": "Things are simple."
+			},
+			{
+				"text": "The MacroBox v1 simply is designed in a non-functional manner. On top of that, it’s far too expensive. That is why I made the cheap and dirty MacroBox v2. It is nothing special but a simple Arduino Micro wired to some Cherry MX Bue Switches."
+			},
+			{
+				"text": "I was planning to make a MacroBox Pro. That would have consisted of a PCB with an Atmega32u4, RGB LEDs, and a custom-made GUI to program the switches. Unfortunately, I realized how many MacroPads are already in existence and that the world simply doesn’t need another."
+			},
+			{
+				"image": "render1.png",
+				"caption": "Render of non-tilted design"
+			},
+			{
+				"html": "<br>"
+			},
+			{
+				"image": "photo1.jpg",
+				"caption": "Final Product"
+			},
+			{
+				"heading": "Circuit",
+				"text": "The MacroBox v2 is manually wired to save on cost."
+			},
+			{
+				"text": [
+					"The schematic can be found on",
+					{
+						"link": "https://easyeda.com/jk4abdl/MarcoBox-v2",
+						"text": "EasyEDA"
+					},
+					"."
+				]
+			},
+			{
+				"text": "The circuit consists of an Arduino Micro, fourteen white 3mm LEDs, fourteen 100Ω resistors, and ten Cherry MX Blue Switches. Yes, a resistor for each LED, it is in fact overkill."
+			},
+			{
+				"text": "The LEDs are wired in parallel. The LEDs are connected straight to the Arduino’s GND and 5V pins. Instead of using a matrix, the four LEDs displaying the current mode are each connected to their own digital pin."
+			},
+			{
+				"text": "Lastly, the Cherry MX Switches are also connected to their own pin. Why? There are enough pins. I ain’t gotta be fancy."
+			},
+			{
+				"heading": "Code",
+				"text": [
+					"The code was written for the Arduino Micro using Arduino’s IDE then uploaded to the board. For the board to replicate the actions of a keyboard, the",
+					{
+						"link": "https://github.com/NicoHood/HID/",
+						"text": "Arduino HID Project library created by NicoHood"
+					},
+					" was used."
+				]
+			},
+			{
+				"text": "The code is poorly written and very much spaghetti code. The structure is all over the place, with each mode indicated by the LEDs being a separate function and each key being a case in a switch statement. Not ideal."
+			},
+			{
+				"text": "Overall, I would rewrite the code and make it nice and neat. As well, Visual Basics would be used to create a GUI that would generate the code and upload it to the board automatically."
+			},
+			{
+				"heading": "Computer-Aided Design",
+				"text": "The CAD is made in SolidWorks. If you need STLs, feel free to contact me."
+			},
+			{
+				"text": "There were two cases created, one with a titled surface, and one with a flat one. Personally, I preferred having the buttons be on a little slant which is why I added a tilted case model. Besides that, the whole thing was secured by four screws, one in each corner.",
+				"html": "<iframe class='normal_cad' scrolling='no' frameborder='0' allowfullscreen='true' src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1350201&width=250&height=250&edraw=true'></iframe>",
+				"caption": "Interactive CAD viewer of tilted design<br>Notice: 3D ContentCentral wouldn’t accept the CAD as an assembly"
+			},
+			{
+				"heading": "Parts List",
+				"text": "Parts needed include:",
+				"ul": [
+					{
+						"amount": 14,
+						"text": "100 ohm Resistors"
+					},
+					{
+						"amount": 10,
+						"link": "https://www.mouser.ca/ProductDetail/540-MX1A-E1NN",
+						"text": "Cherry MX Blue Keyswitch - Plate Mount"
+					},
+					{
+						"amount": 1,
+						"link": "https://store.arduino.cc/usa/arduino-micro",
+						"text": "Arduino Micro"
+					},
+					{
+						"amount": 4,
+						"link": "https://www.homedepot.com/p/2-56-x-1-4-in-Grade-18-8-Stainless-Steel-Phillips-Drive-Flat-Head-Machine-Screws-25-Pack-9000225/311095322",
+						"text": "2-56 Machine Screws 1/4 in"
+					},
+					{
+						"amount": 14,
+						"link": "https://www.mouser.ca/ProductDetail/593-VAOL-3MWY4",
+						"text": "White Flangeless 3mm LEDs"
+					}
+				]
+			},
+			{
+				"heading": "Inspiration",
+				"text": "I just wanted to control the volume of my music while in-game and really needed to justify me getting my hands on Cherry MX switches as well as a 3D Printer."
+			},
+			{
+				"heading": "Conclusion",
+				"text": "Do I use the MacroBox v2? <br> No, it’s in a drawer under my bed. <br> Also printed keycaps don’t feel the best and I’m not paying the shipping to buy just ten keycaps."
+			},
+			{
+				"text": "Did I think I needed it? <br> Yes. I thought that it would be convenient but turns out that I have already optimized my setup."
+			},
+			{
+				"text": "Will I ever use it? <br> Probably if I start streaming or using a software daily that allows me to create shortcuts."
+			}
+		]
+	}
+}

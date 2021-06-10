@@ -1,0 +1,13 @@
+{
+	"project": {
+		"meta": {
+			"refName": "the-repository",
+			"title": "the repository",
+			"version": "",
+			"description": "My grand bookmark of useful sites, information, and resources.",
+			"github":  "",
+			"otherLink": ["https://janik.codes/the-repository/", "the repository"]
+		},
+		"content": []
+	}
+}
