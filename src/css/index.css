@@ -1,0 +1,107 @@
+/* main css file needed for every page */
+
+/* varibles for colours, fonts, and other */
+:root {
+	/* colors */
+	--bg-color: white;
+	--color: black;
+	--bg-color-hover: #e9e9e9;
+	--link-color: #05f;
+	--m-color: #999999;
+
+	/* for dark mode (later) */
+	/* --bg-color: #181a1b;
+	--color: #e8e6e3;
+	--bg-color-hover: #242729;
+	--link-color: #3397ff;
+	--m-color: #a8a095; */
+
+	/* Typography */
+	--font: "IBM Plex Sans", sans-serif;
+
+	/* widths (with the navbar and all that) */
+	--nav-width: 190px;
+	--max-page-width: 60rem;
+	--text-max-width: 37vw;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: gray;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+body {
+	font-family: var(--font);
+	background-color: var(--bg-color);
+	color: var(--color);
+	font-size: 18px;
+}
+
+.page p {
+	line-height: 160%;
+	width: var(--text-max-width);
+}
+
+/* links */
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* page bodies */
+.page {
+	margin: 0 0 5.5em var(--nav-width);
+	max-width: var(--max-page-width);
+}
+
+/* page titles */
+.page-title {
+	font-size: 72px;
+	font-weight: bold;
+	margin: 2rem 0 0 0;
+}
+
+/* for hr */
+hr {
+	border: 1px solid #ccc;
+	border-radius: 0px;
+	margin: 1em 0 1em 0;
+}
+
+/* split screen */
+@media (max-width: 1100px) {
+	.page-title {
+		font-size: 56px;
+	}
+	.page {
+		max-width: 100%;
+		--text-max-width: 85%;
+	}
+}
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
+	.page {
+		margin: 80px 5% 15% 5%;
+		max-width: 100%;
+	}
+	p {
+		width: 100% !important;
+	}
+}

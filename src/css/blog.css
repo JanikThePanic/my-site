@@ -1,0 +1,39 @@
+/* css for the blog page */
+
+.blog-page ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+	padding: none;
+	color: black;
+}
+
+.blog-page li {
+	margin-bottom: 1em;
+	padding-bottom: 0.7rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.blog-page .blog-title {
+	color: black;
+	text-decoration: none;
+	font-size: 2em;
+	display: block;
+	width: 70%;
+}
+
+.blog-page .blog-date {
+	font-size: 0.75em;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+.blog-page .blog-body {
+	line-height: 140%;
+}
+
+.blog-page {
+	font-family: var(--font);
+	color: var(--primary-color);
+	font-size: 18px;
+}

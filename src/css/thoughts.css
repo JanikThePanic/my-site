@@ -1,0 +1,351 @@
+/* css for the thoughts page */
+
+/* need to cancel some root stuff */
+
+.thoughts-page {
+	max-width: 100%;
+	margin: 0 0 5.5em var(--nav-width);
+}
+
+.thoughts-page p {
+	line-height: normal !important;
+	width: auto !important;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+/* the entry has the image and text side */
+
+#ThoughtsGoHere {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	float: left;
+	clear: both;
+}
+
+.entry {
+	display: flex;
+	flex: 1 0 42%;
+	max-width: 47%;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid lightgray;
+	margin-right: 2rem;
+	margin-top: 2rem;
+}
+
+.entry div {
+	margin-bottom: 0.3rem;
+}
+
+.entry p {
+	max-width: 95%;
+}
+
+/* image side */
+
+.image_div {
+	flex: 0.2;
+	margin: 0 1rem 0.5rem 0;
+}
+
+.image {
+	border-radius: 6%;
+	width: 100%;
+}
+
+/* text side */
+
+.text_div {
+	flex: 0.9;
+}
+
+.title {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.type_date {
+	font-weight: bold;
+	display: flex;
+	font-size: 1rem;
+}
+
+.date {
+	color: #e66622;
+}
+
+.rating {
+	display: flex;
+}
+
+/* ratings */
+
+.stars {
+	width: 1rem;
+}
+
+.star {
+	stroke-width: 7%;
+	stroke: black;
+}
+
+.empty {
+	fill: white;
+}
+
+.full {
+	fill: black;
+}
+
+/* none of that now */
+
+.published_creator {
+	display: flex;
+	color: var(--m-color);
+	font-weight: bold;
+}
+
+.thought {
+	overflow: hidden;
+	max-height: 4em;
+}
+
+.thought:hover:not(.expand) {
+	background-color: rgb(230, 230, 230);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.expand {
+	overflow: visible !important;
+	max-height: none !important;
+}
+
+@media screen and (max-width: 1400px) {
+	.image_div {
+		flex: 0.5;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.image_div {
+		flex: 0.3;
+	}
+	.entry {
+		max-width: 100%;
+		margin-right: 0px;
+	}
+	#ThoughtsGoHere {
+		display: block;
+		width: 100%;
+		flex-direction: column;
+		margin: 0px;
+	}
+}
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
+	.entry {
+		max-width: 100%;
+		margin-right: 0px;
+	}
+
+	.image_div {
+		flex: 0.4;
+	}
+
+	.entry p {
+		font-size: 0.8em;
+	}
+
+	.title {
+		font-size: 1.2em !important;
+	}
+
+	#ThoughtsGoHere {
+		display: block;
+		width: 100%;
+		flex-direction: column;
+		margin: 0px;
+	}
+
+	.stars {
+		width: 0.8rem;
+	}
+
+	.entry div {
+		margin-bottom: 0.2rem;
+	}
+}
+
+/* here we got the sorting css */
+
+.sorting {
+	display: block;
+	min-height: 2em;
+	min-width: 100%;
+}
+
+:root {
+	--color_all: #1e272e;
+	--color_movies: #0abde3;
+	--color_anime: #a6c44e;
+	--color_tv: #ff9f43;
+	--color_books: #d65858;
+	--color_music: #d467c6;
+	--white: #ffffff;
+}
+
+.sort_icons {
+	width: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn p {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.btn {
+	float: left;
+	padding: 4px 6px 4px 6px;
+	margin: 0 5px 5px 0;
+	border-radius: 4px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.sort_all {
+	border: 2px solid var(--color_all);
+	color: var(--color_all);
+	background-color: var(--white);
+	fill: var(--color_all);
+}
+.sort_all.active,
+.sort_all:hover {
+	color: var(--white);
+	background-color: var(--color_all);
+	fill: var(--white);
+}
+.sort_movies {
+	border: 2px solid var(--color_movies);
+	color: var(--color_movies);
+	background-color: var(--white);
+	fill: var(--color_movies);
+}
+.sort_movies.active,
+.sort_movies:hover {
+	color: var(--white);
+	background-color: var(--color_movies);
+	fill: var(--white);
+}
+.sort_anime {
+	border: 2px solid var(--color_anime);
+	color: var(--color_anime);
+	background-color: var(--white);
+	fill: var(--color_anime);
+}
+.sort_anime.active,
+.sort_anime:hover {
+	color: var(--white);
+	background-color: var(--color_anime);
+	fill: var(--white);
+}
+.sort_tv {
+	border: 2px solid var(--color_tv);
+	color: var(--color_tv);
+	background-color: var(--white);
+	fill: var(--color_tv);
+}
+.sort_tv.active,
+.sort_tv:hover {
+	color: var(--white);
+	background-color: var(--color_tv);
+	fill: var(--white);
+}
+.sort_books {
+	border: 2px solid var(--color_books);
+	color: var(--color_books);
+	background-color: var(--white);
+	fill: var(--color_books);
+}
+.sort_books.active,
+.sort_books:hover {
+	color: var(--white);
+	background-color: var(--color_books);
+	fill: var(--white);
+}
+.sort_music {
+	border: 2px solid var(--color_music);
+	color: var(--color_music);
+	background-color: var(--white);
+	fill: var(--color_music);
+}
+.sort_music.active,
+.sort_music:hover {
+	color: var(--white);
+	background-color: var(--color_music);
+	fill: var(--white);
+}
+
+/* sport by select element */
+.sort {
+	float: right;
+}
+
+.sort label {
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--m-color);
+}
+
+#mySort {
+	border-radius: 4px;
+	border: 2px solid black;
+	display: inline;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.4em 3.5em 0.4em 0.5em;
+	margin-right: 1.5em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: white;
+	background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
+	background-repeat: no-repeat;
+	background-position: right 1em top 50%;
+	background-size: 0.65em auto;
+}
+
+/* mobile jazz */
+@media screen and (max-width: 1010px) {
+	.sort label {
+		display: none;
+	}
+	.sort {
+		margin-top: 0.5em;
+		display: block;
+		clear: both;
+		float: left;
+	}
+}
+
+/* split screen */
+@media (max-width: 1100px) {
+	.thoughts-page {
+		max-width: 100%;
+		--text-max-width: 85%;
+	}
+}
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
+	.thoughts-page {
+		margin: 80px 5% 15% 5%;
+		max-width: 100%;
+	}
+}

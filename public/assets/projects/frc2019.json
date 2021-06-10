@@ -1,0 +1,13 @@
+{
+	"project": {
+		"meta": {
+			"refName": "frc2019",
+			"title": "FRC 2019 Season",
+			"version": "",
+			"description": "FIRST Robotics 2019 Season with the 2702 Rebels",
+			"github":  "",
+			"otherLink": ["https://2702rebels.com/", "the 2702 Rebels Website"]
+		},
+		"content": []
+	}
+}

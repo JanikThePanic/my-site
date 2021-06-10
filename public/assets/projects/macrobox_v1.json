@@ -1,0 +1,185 @@
+{
+	"project": {
+		"meta": {
+			"refName": "macrobox_v1",
+			"title": "MacroBox",
+			"version": "v1.0",
+			"description": "Custom board with Cherry MX Blues that act as macros.",
+			"github": "https://github.com/JanikThePanic/macrobox-v1",
+			"otherLink": ["", ""]
+		},
+		"content": [
+			{
+				"heading": "Overview",
+				"text": "The MacroBox v1 is the first design in the MacroBox series. <br> It is the least budget efficient and least effective design as it is, after all the first design."
+			},
+			{
+				"text": "It contains a custom-designed PCB holding ten Cherry MX Blue Switches along with an ATmega32u4 as the brains of the system. Eight of the switches are programmed to simulate keystrokes and act as macros for any use. The top two switches change the board’s current “Mode” and macro “Page”, allowing the board to simulate more than eight macros. The current “Mode” is displayed by the first RGB LED, showing a custom colour for the mode, well the second LED displays the “Page”.",
+				"spliter": ["compare_top.png", "compare_under.png"],
+				"image": "compare_top.png",
+				"caption": "Slide the Slider to reveal the inside"
+			},
+			{
+				"heading": "Printed Circuit Board",
+				"text": [
+					"The PCB for this project is 1.6mm thick and consists of two layers. <br> The files for the PCB are available only on",
+					{
+						"link": "https://easyeda.com/jk4abdl/macrobox",
+						"text": "EasyEDA"
+					},
+					"."
+				],
+				"image": "pcb_side.png",
+				"caption": "Perspective view of the PCB with electric components"
+			},
+			{
+				"heading": "Code",
+				"text": [
+					"The plan was to flash the chip with the",
+					{
+						"link": "https://store.arduino.cc/usa/arduino-micro",
+						"text": "Arduino Micro"
+					},
+					" Firmware and program it in Arduino, with help from the",
+					{
+						"link": "https://www.arduino.cc/reference/en/language/functions/usb/keyboard/",
+						"text": "Keyboard Library"
+					},
+					"."
+				]
+			},
+			{
+				"text": "Unfortunately, I never got to that as I began working on a cheaper version, the MacroBox v2."
+			},
+			{
+				"heading": "Computer-Aided Design",
+				"text": "The CAD is made in SolidWorks. If you need STLs, feel free to contact me."
+			},
+			{
+				"text": [
+					"The casing is designed to be held together by four countersunk",
+					{
+						"link": "https://www.homedepot.com/p/Everbilt-4-40-x-1-1-4-in-Phillips-Flat-Head-Machine-Screws-6-Pack-28281/202706116",
+						"text": "#4-40"
+					},
+					" 1/4 inch long machine screws. The PCB is held in place by four",
+					{
+						"link": "https://www.homedepot.com/p/2-56-x-1-4-in-Phillips-Slotted-Combination-Drive-Round-Head-Machine-Screws-Zinc-Plated-in-Steel-100-Pack-9002676/310889508",
+						"text": "#2-56"
+					},
+					" 1/4 inch long machine screws."
+				],
+				"html": "<iframe scrolling='no' class='normal_cad' frameborder='0' allowfullscreen='true' src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1348623&width=250&height=250&edraw=true' id='def_cad'></iframe>",
+				"caption": "Interactive CAD viewer"
+			},
+			{
+				"heading": "Parts List",
+				"text": "Parts needed include:",
+				"ul": [
+					{
+						"amount": 16,
+						"text": "75 ohm Resistors"
+					},
+					{
+						"amount": 10,
+						"link": "https://mechbox.co.uk/collections/single-keycaps/products/dsa-single-keycaps?variant=12594593792042",
+						"text": "DSA Single Keycaps",
+						"ul": [
+							{
+								"text": "Red"
+							},
+							{
+								"text": "Dark Green"
+							},
+							{
+								"text": "Yellow"
+							},
+							{
+								"text": "Purple"
+							},
+							{
+								"text": "Light Yellow"
+							},
+							{
+								"text": "Dark Pink"
+							},
+							{
+								"text": "Dark Purple"
+							},
+							{
+								"text": "Light Blue"
+							},
+							{
+								"text": "Orange"
+							},
+							{
+								"text": "Pink"
+							}
+						]
+					},
+					{
+						"amount": 10,
+						"link": "https://mechanicalkeyboards.com/shop/index.php?l=product_detail&amp;p=1041",
+						"text": "Cherry MX Blue Keyswitch - PCB Mount"
+					},
+					{
+						"amount": 1,
+						"link": "https://www.microchip.com/wwwproducts/en/ATmega32u4",
+						"text": "ATmega32U4"
+					},
+					{
+						"amount": 2,
+						"link": "https://www.sparkfun.com/products/9264",
+						"text": "LED - RGB Diffused Common Cathode"
+					},
+					{
+						"amount": 10,
+						"link": "https://www.digikey.com/products/en?mpart=VAOL-3MWY4&amp;v=28",
+						"text": "White Flangeless 3mm LEDs"
+					},
+					{
+						"amount": 4,
+						"link": "https://www.homedepot.com/p/Everbilt-4-40-x-1-1-4-in-Phillips-Flat-Head-Machine-Screws-6-Pack-28281/202706116",
+						"text": "4-40 Countersunk Machine Screws 1/4 in"
+					},
+					{
+						"amount": 4,
+						"link": "https://www.homedepot.com/p/2-56-x-1-4-in-Phillips-Slotted-Combination-Drive-Round-Head-Machine-Screws-Zinc-Plated-in-Steel-100-Pack-9002676/310889508",
+						"text": "2-56 Machine Screws 1/4 in"
+					}
+				]
+			},
+			{
+				"heading": "Inspiration",
+				"text": [
+					"When playing games, editing, or designing, there would always be little shortcuts I would want automated. That said, something like a",
+					{
+						"link": "https://www.elgato.com/en/gaming/stream-deck",
+						"text": "Stream Deck"
+					},
+					" would be out of my budget. Additionally, I wanted to feel the satisfying clicks of the",
+					{
+						"link": "https://www.cherrymx.de/en/mx-original/mx-blue.html",
+						"text": "Cherry MX Blues"
+					},
+					".",
+					"<br>With those things in mind, I decided to combine my electronics, design and programming enthusiasm. This led to the creation of a 3D printable case with a custom PCB inside controlled by an ATmega32U4 which I could then easily program in Arduino."
+				]
+			},
+			{
+				"heading": "Conclusion",
+				"text": "Although it was fun designing it, the MacroBox has many major flaws. To begin, the Cherry MX Blues are backwards and are meant to have the LEDs facing forward. I only noticed that as I was working on the MacroBox v2. Secondly, the RGB LEDs are missing resistors, and so the code would have to account for that. Thirdly, I believe the backlighting LEDs are wired incorrectly on the PCB, which may lead to inconsistent lighting. Maybe. I am not certain of that."
+			},
+			{
+				"text": "Overall, the MacroBox v1 was just a learning experience for me. I hope to have MacroBox v2 be a cheap and dirty version of the MacroBox v1, just so I can afford to make it. In the end, I plan on having a MacroBox Pro, which will have all the electrical figured out, will be tilted on an angle, will look spectacular, and will have a custom device driver that can program the board."
+			},
+			{
+				"heading": "Notice",
+				"text": "Do <strong>NOT</strong> make this. <br> With the way the PCB is wired, the AtMega32U4 can NOT be programmed in any manner."
+			},
+			{
+				"text": "This project has been a learning experience for me."
+			}
+		]
+	}
+}
