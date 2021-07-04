@@ -14,6 +14,7 @@ function projects() {
 			<h1 className="page-title">Projects</h1>
 
 			<ul className="project-list">
+				<ProjectItem refName="rc-ultimate" />
 				<ProjectItem refName="laika" />
 				<ProjectItem refName="macrobox_v2" />
 				<ProjectItem refName="macrobox_v1" />
