@@ -11,7 +11,10 @@ function friend() {
 			<p>
 				this is {refName} -{">"} 😎
 				<br />
-				{refName} is cool.
+				{refName.toLowerCase() === "owen" 
+					? <div>"OWEN IS THE MAN"</div>
+					: <div>{refName+"is cool"}</div>
+				}
 			</p>
 		</div>
 	);
