@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -22,11 +22,77 @@ function App() {
 	// stfu, i know the last link element in nav doesnt have a to= just stfu
 	// console.log = console.warn = console.error = () => {};
 
+	// i stole this code from https://www.w3schools.com/js/js_cookies.asp
+	// thats why it is shit
+	function setCookie(cname, cvalue, exdays) {
+		const d = new Date();
+		if (!exdays) {
+			exdays = 99999;
+		}
+		d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+		let expires = "expires=" + d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+		let name = cname + "=";
+		let ca = document.cookie.split(";");
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) === " ") {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) === 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	const [darkMode, setTheme] = useState(
+		getCookie("theme") === "dark" ? true : false
+	);
+
+	function toggleTheme() {
+		let theme;
+
+		if (!darkMode) {
+			theme = "dark";
+		} else {
+			theme = "light";
+		}
+
+		setCookie("theme", theme, "");
+		setTheme(darkMode ? false : true);
+	}
+
 	return (
 		<Fragment>
 			<Router>
+				{/* style for different themes */}
+				<style
+					dangerouslySetInnerHTML={{
+						__html: darkMode
+							? `:root {
+								--bg-color: #181a1b;
+								--color: #e8e6e3;
+								--bg-color-hover: #242729;
+								--link-color: #3397ff;
+								--m-color: #a8a095;
+								--mobile-nav: rgba(24, 26, 27, 0.75);
+					}`
+							: `:root {
+								--bg-color: white;
+								--color: black;
+								--bg-color-hover: #e9e9e9;
+								--link-color: #05f;
+								--m-color: #999999;
+								--mobile-nav: rgba(255, 255, 255, 0.75);
+					}`,
+					}}
+				/>
 				{/* show navbar, which will change the /whatever */}
-				<Navbar />
+				<Navbar toggleTheme={toggleTheme} />
 				{/* then based on the /whatever show appropriate whatever */}
 				<Switch>
 					{/* if its the /projects, we go to the list page */}

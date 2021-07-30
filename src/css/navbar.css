@@ -68,7 +68,7 @@ Link:hover {
 	.nav {
 		height: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.75);
+		background: var(--mobile-nav);
 		backdrop-filter: blur(5px);
 		overflow-x: hidden;
 		transition: 0.5s;
@@ -90,7 +90,7 @@ Link:hover {
 	.nav a:hover,
 	Link:hover {
 		color: #6b6b6b;
-		background: rgba(255, 255, 255, 0);
+		background: var(--bg-color-hover);
 	}
 	.nav .closebtn {
 		display: block;

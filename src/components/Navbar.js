@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/navbar.css";
 
+// opens and closes the nav on mobile
 function openNav() {
 	document.getElementById("mySidenav").style.height = "100%";
 }
@@ -17,7 +18,7 @@ function checkForMobile() {
 	}
 }
 
-function navbar() {
+function navbar(props) {
 	return (
 		<div>
 			<div id="mySidenav" className="nav" onClick={checkForMobile}>
@@ -33,6 +34,13 @@ function navbar() {
 					<Link to="/contact">Contact</Link>
 					<Link className="closebtn" onClick={closeNav}>
 						&times;
+					</Link>
+
+					<br />
+
+					{/* button to switch themes */}
+					<Link className="theme-button" onClick={props.toggleTheme}>
+						Theme
 					</Link>
 				</div>
 			</div>

@@ -2,20 +2,6 @@
 
 /* varibles for colours, fonts, and other */
 :root {
-	/* colors */
-	--bg-color: white;
-	--color: black;
-	--bg-color-hover: #e9e9e9;
-	--link-color: #05f;
-	--m-color: #999999;
-
-	/* for dark mode (later) */
-	/* --bg-color: #181a1b;
-	--color: #e8e6e3;
-	--bg-color-hover: #242729;
-	--link-color: #3397ff;
-	--m-color: #a8a095; */
-
 	/* Typography */
 	--font: "IBM Plex Sans", sans-serif;
 
@@ -23,6 +9,13 @@
 	--nav-width: 190px;
 	--max-page-width: 60rem;
 	--text-max-width: 37vw;
+}
+
+body {
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
 }
 
 /* scroll bar */
