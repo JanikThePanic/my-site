@@ -93,11 +93,11 @@
 }
 
 .empty {
-	fill: fill;
+	fill: var(--bg-color);
 }
 
 .full {
-	fill: var(--color));
+	fill: var(--color);
 }
 
 /* none of that now */
