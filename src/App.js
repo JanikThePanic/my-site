@@ -80,6 +80,14 @@ function App() {
 								--link-color: #3397ff;
 								--m-color: #a8a095;
 								--mobile-nav: rgba(24, 26, 27, 0.75);
+
+								--color_all: #d0ccc6;
+								--color_movies: #2fd3f6;
+								--color_anime: #adc95d;
+								--color_tv: #ffa248;
+								--color_books: #d86161;
+								--color_music: #d66dc8;
+								--fill: #181a1b;
 					}`
 							: `:root {
 								--bg-color: white;
@@ -88,6 +96,14 @@ function App() {
 								--link-color: #05f;
 								--m-color: #999999;
 								--mobile-nav: rgba(255, 255, 255, 0.75);
+
+								--color_all: #1e272e;
+								--color_movies: #0abde3;
+								--color_anime: #a6c44e;
+								--color_tv: #ff9f43;
+								--color_books: #d65858;
+								--color_music: #d467c6;
+								--fill: #ffffff;
 					}`,
 					}}
 				/>

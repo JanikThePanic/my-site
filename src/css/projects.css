@@ -9,14 +9,14 @@
 
 .project-list li {
 	padding: none;
-	color: black;
+	color: var(--color);
 	margin-bottom: 0.7em;
 	padding-bottom: 0.7rem;
 	border-bottom: 1px solid #ccc;
 }
 
 .project-list a {
-	color: black;
+	color: var(--color);
 	font-weight: bold;
 }
 
