@@ -20,7 +20,7 @@
 				"caption": "Slide the Slider to reveal the inside"
 			},
 			{
-				"heading": "Printed Circuit Board",
+				"heading": "Circuit",
 				"text": [
 					"The PCB for this project is 1.6mm thick and consists of two layers. <br> The files for the PCB are available only on",
 					{
@@ -52,7 +52,7 @@
 				"text": "Unfortunately, I never got to that as I began working on a cheaper version, the MacroBox v2."
 			},
 			{
-				"heading": "Computer-Aided Design",
+				"heading": "Design",
 				"text": "The CAD is made in SolidWorks. If you need STLs, feel free to contact me."
 			},
 			{
