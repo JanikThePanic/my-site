@@ -202,6 +202,9 @@ function loadXML() {
 
 // function that loops through the data and spins it into the html. required the "this" from the request made above
 function loadEntries(xml) {
+	// clear existing entries
+	document.getElementById("ThoughtsGoHere").innerHTML = "";
+
 	var file = xml.responseXML;
 	var loaded = "";
 	var pulledData = file.getElementsByTagName("entry");
