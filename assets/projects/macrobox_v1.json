@@ -14,13 +14,10 @@
 				"text": "The MacroBox v1 is the first design in the MacroBox series. <br> It is the least budget efficient and least effective design as it is, after all the first design."
 			},
 			{
-				"text": "It contains a custom-designed PCB holding ten Cherry MX Blue Switches along with an ATmega32u4 as the brains of the system. Eight of the switches are programmed to simulate keystrokes and act as macros for any use. The top two switches change the board’s current “Mode” and macro “Page”, allowing the board to simulate more than eight macros. The current “Mode” is displayed by the first RGB LED, showing a custom colour for the mode, well the second LED displays the “Page”.",
-				"spliter": ["compare_top.png", "compare_under.png"],
-				"image": "compare_top.png",
-				"caption": "Slide the Slider to reveal the inside"
+				"text": "It contains a custom-designed PCB holding ten Cherry MX Blue Switches along with an ATmega32u4 as the brains of the system. Eight of the switches are programmed to simulate keystrokes and act as macros for any use. The top two switches change the board’s current “Mode” and macro “Page”, allowing the board to simulate more than eight macros. The current “Mode” is displayed by the first RGB LED, showing a custom colour for the mode, well the second LED displays the “Page”."
 			},
 			{
-				"heading": "Printed Circuit Board",
+				"heading": "Circuit",
 				"text": [
 					"The PCB for this project is 1.6mm thick and consists of two layers. <br> The files for the PCB are available only on",
 					{
@@ -52,7 +49,7 @@
 				"text": "Unfortunately, I never got to that as I began working on a cheaper version, the MacroBox v2."
 			},
 			{
-				"heading": "Computer-Aided Design",
+				"heading": "Design",
 				"text": "The CAD is made in SolidWorks. If you need STLs, feel free to contact me."
 			},
 			{
