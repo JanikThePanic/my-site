@@ -12,7 +12,9 @@ function ProjectItem(props) {
 
 	// lets fetch the json doc using the referance name (refName)
 	// catch error, and just say sorry :(
-	fetch("/assets/projects/" + props.refName + ".json")
+	fetch(
+		"https://janik.codes/dependencies/projects/" + props.refName + ".json"
+	)
 		.then((response) => response.json())
 		.then((data) => pullMetaData(data))
 		.catch(function (error) {

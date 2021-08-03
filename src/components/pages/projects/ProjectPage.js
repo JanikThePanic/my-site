@@ -13,13 +13,13 @@ function ProjectPage() {
 	const [projectContent, setProjectContent] = useState();
 	// relative link for images
 	let imageLocation =
-		process.env.PUBLIC_URL + "/assets/images/projects/" + refName + "/";
+		"https://janik.codes/dependencies/projects/images/" + refName + "/";
 	// caption counter used to count captions
 	let captionCount = 0;
 
 	// lets fetch that json
 	useEffect(() => {
-		fetch("/assets/projects/" + refName + ".json")
+		fetch("https://janik.codes/dependencies/projects/" + refName + ".json")
 			.then((response) => response.json())
 			.then((json) => setProjectContent(json));
 	}, []);
