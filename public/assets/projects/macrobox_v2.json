@@ -24,7 +24,7 @@
 				"caption": "Render of non-tilted design"
 			},
 			{
-				"html": "<br>"
+				"text": " "
 			},
 			{
 				"image": "photo1.jpg",
@@ -76,8 +76,8 @@
 			},
 			{
 				"text": "There were two cases created, one with a titled surface, and one with a flat one. Personally, I preferred having the buttons be on a little slant which is why I added a tilted case model. Besides that, the whole thing was secured by four screws, one in each corner.",
-				"html": "<iframe class='normal_cad' scrolling='no' frameborder='0' allowfullscreen='true' src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1350201&width=250&height=250&edraw=true'></iframe>",
-				"caption": "Interactive CAD viewer of tilted design<br>Notice: 3D ContentCentral wouldn’t accept the CAD as an assembly"
+				"cad": "https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1350201&width=250&height=250&edraw=true",
+				"caption": "Interactive CAD viewer of tilted design | Notice: 3D ContentCentral wouldn’t accept the CAD as an assembly"
 			},
 			{
 				"heading": "Parts List",
@@ -115,13 +115,25 @@
 			},
 			{
 				"heading": "Conclusion",
-				"text": "Do I use the MacroBox v2? <br> No, it’s in a drawer under my bed. <br> Also printed keycaps don’t feel the best and I’m not paying the shipping to buy just ten keycaps."
+				"text": "Do I use the MacroBox v2?"
 			},
 			{
-				"text": "Did I think I needed it? <br> Yes. I thought that it would be convenient but turns out that I have already optimized my setup."
+				"text": "No, it’s in a drawer under my bed."
 			},
 			{
-				"text": "Will I ever use it? <br> Probably if I start streaming or using a software daily that allows me to create shortcuts."
+				"text": "Also printed keycaps don’t feel the best and I’m not paying the shipping to buy just ten keycaps."
+			},
+			{
+				"text": "Did I think I needed it?"
+			},
+			{
+				"text": "Yes. I thought that it would be convenient but turns out that I have already optimized my setup."
+			},
+			{
+				"text": "Will I ever use it?"
+			},
+			{
+				"text": "Probably if I start streaming or using a software daily that allows me to create shortcuts."
 			}
 		]
 	}

@@ -1,244 +1,225 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import SupportMe from "../../SupportMe";
 import "../../../css/projects.css";
+import { Fragment } from "react/cjs/react.production.min";
 
 function ProjectPage() {
 	// the refName is given in the url
 	let { refName } = useParams();
-	let loadedPage = "";
+	// will use for rendering and holding json
+	const [projectContent, setProjectContent] = useState();
+	// relative link for images
+	let imageLocation =
+		process.env.PUBLIC_URL + "/assets/images/projects/" + refName + "/";
+	// caption counter used to count captions
+	let captionCount = 0;
 
-	// lets fetch the json doc
-	fetch("/assets/projects/" + refName + ".json")
-		.then((response) => response.json())
-		.then((data) => loadPage(data))
-		.catch(function (error) {
-			loadedPage =
-				"<h1 class='page-title'>Failed to load project.</h1><p>Sorry!<p/>";
-			renderData();
-		});
+	// lets fetch that json
+	useEffect(() => {
+		fetch("/assets/projects/" + refName + ".json")
+			.then((response) => response.json())
+			.then((json) => setProjectContent(json));
+	}, []);
 
-	// function to load the page
-	function loadPage(json) {
-		// i dont wanna referance project and content everytime
-		let meta = json.project.meta;
-		let content = json.project.content;
+	//
+	// function will load the page, taking the json and setting it to JSX
+	//
+	function loadProjectPage() {
+		// easier to referance
+		let meta = projectContent.project.meta;
 
-		//
-		// lets load the meta data
-		//
-		loadedPage += loadMetaData(meta);
+		return (
+			<div className="page">
+				<Helmet>
+					<title>
+						{meta.title} {meta.version} | Jahangir Abdullayev
+					</title>
+				</Helmet>
 
-		//
-		// lets load the actual page content
-		// this means the headings, the imgs, the words and more
-		//
-		loadedPage += loadContentData(content);
+				{/* show title */}
+				<h1 className="page-title">
+					{meta.title}
+					{/* show version, if one is present */}
+					{meta.version ? (
+						<Fragment>
+							{" "}
+							<sup> {meta.version} </sup>
+						</Fragment>
+					) : null}
+				</h1>
 
-		//
-		// and lets write it all to the page
-		//
-		renderData();
-	}
+				{/* add github link */}
+				{meta.github ? (
+					<p className="meta_link">
+						All files available on <a href={meta.github}>GitHub</a>.
+					</p>
+				) : null}
+				{/* add other project link */}
+				{meta.otherLink[0] ? (
+					<p className="meta_link">
+						More information available on{" "}
+						<a href={meta.otherLink[0]}>{meta.otherLink[1]}</a>.
+					</p>
+				) : null}
 
-	function loadMetaData(meta) {
-		let loadedMeta = "";
+				{/* time for the actual content */}
+				{/* 
+				// json file order of properties
+				// heading
+				// text
+				// image
+				// external images
+				// cad
+				// caption
+				// ul
+				*/}
 
-		//
-		// lets start with the title
-		//
-		let title = meta.title;
-		title = "<h1 class='page-title'>" + title;
-		// if theres a version property, we gotta show that
-		meta.version !== ""
-			? (title += " <sup>" + meta.version + "</sup></h1>")
-			: (title += "</h1>");
-		// lets add this to loaded
-		loadedMeta += title;
-
-		//
-		// lets add the link to github or what not
-		//
-		let projectLinks = "";
-		// if there is both a github link and other link
-		if (meta.github !== "" && meta.otherLink[0] !== "") {
-			projectLinks =
-				"<p style='font-style:italic;'>All files available on <a href='" +
-				meta.github +
-				"'target='_blank'>GitHub</a>.<br> More information available on <a href='" +
-				meta.otherLink[0] +
-				"'target='_blank'>" +
-				meta.otherLink[1] +
-				"</a>.</p>";
-		}
-		// if only github link
-		else if (meta.github !== "") {
-			projectLinks =
-				"<p style='font-style:italic;'>All files available on <a href='" +
-				meta.github +
-				"'target='_blank'>GitHub</a>.</p>";
-		}
-		// if only otherlink
-		else if (meta.otherLink[0] !== "") {
-			projectLinks =
-				"<p style='font-style:italic;'>More information available on <a href='" +
-				meta.otherLink[0] +
-				"'target='_blank'>" +
-				meta.otherLink[1] +
-				"</a>.</p>";
-		}
-		// lets add this to be loaded
-		loadedMeta += projectLinks;
-
-		return loadedMeta;
-	}
-
-	function loadContentData(doc) {
-		// json file order of properties
-		// heading
-		// text
-		// image
-		// html
-		// caption
-		// ul
-
-		// loaded content to later render
-		let loadedContent = "";
-		// shortcut for the images
-		let imageLocation =
-			process.env.PUBLIC_URL + "/assets/images/projects/" + refName + "/";
-		// count of caption
-		let captionCount = 1;
-
-		// lets run thru all the content
-		for (let contentIndex = 0; contentIndex < doc.length; contentIndex++) {
-			// lemme just pull all the content in that content block
-			let contentBlock = doc[contentIndex];
-
-			// if the content block has a heading
-			if (contentBlock.heading) {
-				// add a <br> before headings for space
-				// but not for the first one
-				if (contentIndex !== 0) {
-					loadedContent += "<br>";
-				}
-				loadedContent += "<h2>" + contentBlock.heading + "</h2>";
-			}
-
-			// if the content block has a body text
-			if (contentBlock.text) {
-				// text is a p element
-				loadedContent += "<p>";
-				// if the text is just a string
-				if (typeof contentBlock.text === "string") {
-					loadedContent += contentBlock.text;
-				}
-				// other wise its an object with text and links
-				else {
-					// lets run thru all the objects in the text
-					for (const i of contentBlock.text) {
-						// if its an object, it means it has a link
-						if (typeof i === "object") {
-							loadedContent +=
-								"<a href='" +
-								i.link +
-								"' target='_blank' rel='noopener noreferrer'> " +
-								i.text +
-								"</a>";
+				{
+					// lets map and run thru every index of the content array
+					projectContent.project.content.map((content, index) => {
+						// if theres an image we need its full position
+						let fullImageLocation;
+						if (content.image) {
+							fullImageLocation = imageLocation + content.image;
 						}
-						// otherwise its just a string, and we just add it
-						else {
-							loadedContent += i;
+						// if theres a caption, we need to add on to make it count
+						if (content.caption) {
+							captionCount++;
 						}
-					}
+
+						return (
+							<Fragment>
+								{/* if the current content index has a heading */}
+								{/* we also want a br but not in the first */}
+								{content.heading && index !== 0 ? <br /> : null}
+								{content.heading ? (
+									<Fragment>
+										{" "}
+										<h2>{content.heading}</h2>{" "}
+									</Fragment>
+								) : null}
+
+								{/* text */}
+								{/* and if text is just a string or has links */}
+								{content.text &&
+								typeof content.text === "string" ? (
+									<p>{content.text}</p>
+								) : null}
+								{/* if its text and is an object, it means there are links */}
+								{content.text &&
+								typeof content.text !== "string" ? (
+									<p>
+										{content.text.map((i, index) => {
+											return typeof i === "string" ? (
+												<Fragment>{i}</Fragment>
+											) : (
+												<a
+													href={i.link}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{" "}
+													{i.text}
+												</a>
+											);
+										})}
+									</p>
+								) : null}
+
+								{/* next on the list we have images */}
+								{content.image ? (
+									<img
+										alt=""
+										className="normal_img"
+										src={fullImageLocation}
+									/>
+								) : null}
+
+								{/* or if the images are not on my domain */}
+								{content.eximage ? (
+									<img
+										alt=""
+										className="normal_img"
+										src={content.eximage}
+									/>
+								) : null}
+
+								{/* cad for designs */}
+								{content.cad ? (
+									<iframe
+										scrolling="no"
+										class="normal_cad"
+										frameborder="0"
+										allowfullscreen="true"
+										title={meta.title}
+										src={content.cad}
+									/>
+								) : null}
+
+								{/* with great images, comes great captions */}
+								{content.caption ? (
+									<figcaption>
+										Figure {captionCount}. {content.caption}
+									</figcaption>
+								) : null}
+
+								{/* now, recursive lists, as in theory, a list can be infinite */}
+								{content.ul ? createList(content.ul) : null}
+							</Fragment>
+						);
+					})
 				}
-				// close that p element
-				loadedContent += "</p>";
-			}
 
-			// if there is an image in the content block
-			if (contentBlock.image) {
-				loadedContent +=
-					"<img class='normal_img' src='" +
-					imageLocation +
-					contentBlock.image +
-					"'>";
-			}
-
-			// if there is just an html, just plug it
-			if (contentBlock.html) {
-				loadedContent += contentBlock.html;
-			}
-
-			// if there is a caption in the content block
-			if (contentBlock.caption) {
-				loadedContent +=
-					"<figcaption> Figure " +
-					captionCount +
-					". " +
-					contentBlock.caption +
-					"</figcaption>";
-				captionCount++;
-			}
-
-			// if there is a list to display
-			if (contentBlock.ul) {
-				loadedContent += "<ul>";
-				loadedContent += loadUl(contentBlock.ul);
-				loadedContent += "</ul>";
-			}
-
-			function loadUl(list) {
-				// points to return and render
-				let points = "";
-
-				for (const point of list) {
-					// start link
-					points += "<li>";
-					// if there is an amoung to the point
-					if (point.amount) {
-						points += "x" + point.amount + " ";
-					}
-					// if it has a link
-					if (point.link) {
-						points +=
-							"<a href='" +
-							point.link +
-							"' target='_blank' rel='noopener noreferrer'>" +
-							point.text +
-							"</a>";
-					}
-					// if there is just a text
-					else if (point.text) {
-						points += point.text;
-					}
-					// if it has a list
-					if (point.ul) {
-						points += "<ul>";
-						points += loadUl(point.ul);
-						points += "</ul>";
-					}
-					// close the point
-					points += "</li>";
-				}
-
-				// lets send these points back
-				return points;
-			}
-		}
-
-		return loadedContent;
+				<SupportMe />
+			</div>
+		);
 	}
 
-	// write the var to the page
-	function renderData() {
-		document.getElementsByClassName("ProjectGoesHere")[0].innerHTML =
-			loadedPage;
+	// function that creates a list with JSX
+	function createList(list) {
+		return (
+			<ul>
+				{/* map all points of list */}
+				{list.map((i, key) => {
+					return (
+						// create point
+						<li>
+							{/* if there is an amount */}
+							{i.amount ? "x" + i.amount + " " : null}
+
+							{/* if there is a link */}
+							{i.link ? (
+								<a
+									href={i.link}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{i.text}
+								</a>
+							) : // or if there is just text
+							i.text ? (
+								i.text
+							) : null}
+
+							{/* if theres a list inside a list */}
+							{i.ul ? createList(i.ul) : null}
+						</li>
+					);
+				})}
+			</ul>
+		);
 	}
 
-	return (
+	// if for whatever the loadingpage fucntion fails
+	// the "failed to load" will be there
+	return projectContent ? (
+		loadProjectPage()
+	) : (
 		<div className="page">
-			<span className="ProjectGoesHere"></span>
+			<h1 className="page-title">Failed to load project.</h1>
+			<p>Sorry!</p>
 
 			<SupportMe />
 		</div>

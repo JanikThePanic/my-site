@@ -20,6 +20,11 @@
 	font-weight: bold;
 }
 
+/* project links in meta data */
+.meta_link {
+	font-style: italic;
+}
+
 /* image cations */
 figcaption {
 	font-style: italic;
