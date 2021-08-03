@@ -11,15 +11,21 @@
 		"content": [
 			{
 				"heading": "Overview",
-				"text": "The MacroBox v1 is the first design in the MacroBox series. <br> It is the least budget efficient and least effective design as it is, after all the first design."
+				"text": "The MacroBox v1 is the first design in the MacroBox series."
+			},
+			{
+				"text": "It is the least budget efficient and least effective design as it is, after all the first design."
 			},
 			{
 				"text": "It contains a custom-designed PCB holding ten Cherry MX Blue Switches along with an ATmega32u4 as the brains of the system. Eight of the switches are programmed to simulate keystrokes and act as macros for any use. The top two switches change the board’s current “Mode” and macro “Page”, allowing the board to simulate more than eight macros. The current “Mode” is displayed by the first RGB LED, showing a custom colour for the mode, well the second LED displays the “Page”."
 			},
 			{
 				"heading": "Circuit",
+				"text": "The PCB for this project is 1.6mm thick and consists of two layers."
+			},
+			{
 				"text": [
-					"The PCB for this project is 1.6mm thick and consists of two layers. <br> The files for the PCB are available only on",
+					"The files for the PCB are available only on",
 					{
 						"link": "https://easyeda.com/jk4abdl/macrobox",
 						"text": "EasyEDA"
@@ -66,7 +72,7 @@
 					},
 					" 1/4 inch long machine screws."
 				],
-				"html": "<iframe scrolling='no' class='normal_cad' frameborder='0' allowfullscreen='true' src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1348623&width=250&height=250&edraw=true' id='def_cad'></iframe>",
+				"cad": "https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1348623&width=250&height=250&edraw=true",
 				"caption": "Interactive CAD viewer"
 			},
 			{
@@ -159,9 +165,11 @@
 						"link": "https://www.cherrymx.de/en/mx-original/mx-blue.html",
 						"text": "Cherry MX Blues"
 					},
-					".",
-					"<br>With those things in mind, I decided to combine my electronics, design and programming enthusiasm. This led to the creation of a 3D printable case with a custom PCB inside controlled by an ATmega32U4 which I could then easily program in Arduino."
+					"."
 				]
+			},
+			{
+				"text": "With those things in mind, I decided to combine my electronics, design and programming enthusiasm. This led to the creation of a 3D printable case with a custom PCB inside controlled by an ATmega32U4 which I could then easily program in Arduino."
 			},
 			{
 				"heading": "Conclusion",
@@ -172,7 +180,10 @@
 			},
 			{
 				"heading": "Notice",
-				"text": "Do <strong>NOT</strong> make this. <br> With the way the PCB is wired, the AtMega32U4 can NOT be programmed in any manner."
+				"text": "Do not make this."
+			},
+			{
+				"text": "With the way the PCB is wired, the AtMega32U4 can NOT be programmed in any manner."
 			},
 			{
 				"text": "This project has been a learning experience for me."
