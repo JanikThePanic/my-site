@@ -45,6 +45,13 @@ figcaption {
 	height: 475px;
 }
 
+/* css for the slider when comparing 2 imgs */
+.compare_slider {
+	border: none;
+	border-radius: 8px;
+	height: 100px;
+}
+
 /* mobile stuff */
 
 @media screen and (max-width: 600px) {
