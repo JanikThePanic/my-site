@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ReactCompareImage from "react-image-comparison";
 import { Helmet } from "react-helmet";
 import SupportMe from "../../SupportMe";
 import "../../../css/projects.css";
@@ -71,6 +72,7 @@ function ProjectPage() {
 				// text
 				// image
 				// external images
+				// splitter
 				// cad
 				// caption
 				// ul
@@ -139,6 +141,28 @@ function ProjectPage() {
 										className="normal_img"
 										src={content.eximage}
 									/>
+								) : null}
+
+								{/* if i wanna compare two images */}
+								{content.splitter ? (
+									<div className="normal_img">
+										<ReactCompareImage
+											handle={
+												<button
+													type="button"
+													className="compare_slider"
+												></button>
+											}
+											leftImage={
+												imageLocation +
+												content.splitter[0]
+											}
+											rightImage={
+												imageLocation +
+												content.splitter[1]
+											}
+										/>
+									</div>
 								) : null}
 
 								{/* cad for designs */}
