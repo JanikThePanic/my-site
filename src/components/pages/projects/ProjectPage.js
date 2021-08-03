@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ReactCompareImage from "react-compare-image";
 import { Helmet } from "react-helmet";
 import SupportMe from "../../SupportMe";
 import "../../../css/projects.css";
@@ -72,7 +71,6 @@ function ProjectPage() {
 				// text
 				// image
 				// external images
-				// splitter
 				// cad
 				// caption
 				// ul
@@ -81,6 +79,11 @@ function ProjectPage() {
 				{
 					// lets map and run thru every index of the content array
 					projectContent.project.content.map((content, index) => {
+						// if theres an image we need its full position
+						let fullImageLocation;
+						if (content.image) {
+							fullImageLocation = imageLocation + content.image;
+						}
 						// if theres a caption, we need to add on to make it count
 						if (content.caption) {
 							captionCount++;
@@ -130,7 +133,7 @@ function ProjectPage() {
 									<img
 										alt=""
 										className="normal_img"
-										src={imageLocation + content.image}
+										src={fullImageLocation}
 									/>
 								) : null}
 
@@ -143,36 +146,13 @@ function ProjectPage() {
 									/>
 								) : null}
 
-								{/* if i wanna compare two images */}
-								{content.splitter ? (
-									<div className="normal_img">
-										<ReactCompareImage
-											leftImage={
-												imageLocation +
-												content.splitter[0]
-											}
-											rightImage={
-												imageLocation +
-												content.splitter[1]
-											}
-											sliderLineWidth="4"
-											handle={
-												<button
-													className="compare_slider"
-													type="button"
-												></button>
-											}
-										/>
-									</div>
-								) : null}
-
 								{/* cad for designs */}
 								{content.cad ? (
 									<iframe
 										scrolling="no"
-										className="normal_cad"
-										frameBorder="0"
-										allowFullScreen={true}
+										class="normal_cad"
+										frameborder="0"
+										allowfullscreen="true"
 										title={meta.title}
 										src={content.cad}
 									/>
