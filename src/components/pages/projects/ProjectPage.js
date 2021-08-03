@@ -79,11 +79,6 @@ function ProjectPage() {
 				{
 					// lets map and run thru every index of the content array
 					projectContent.project.content.map((content, index) => {
-						// if theres an image we need its full position
-						let fullImageLocation;
-						if (content.image) {
-							fullImageLocation = imageLocation + content.image;
-						}
 						// if theres a caption, we need to add on to make it count
 						if (content.caption) {
 							captionCount++;
@@ -133,7 +128,7 @@ function ProjectPage() {
 									<img
 										alt=""
 										className="normal_img"
-										src={fullImageLocation}
+										src={imageLocation + content.image}
 									/>
 								) : null}
 
@@ -150,9 +145,9 @@ function ProjectPage() {
 								{content.cad ? (
 									<iframe
 										scrolling="no"
-										class="normal_cad"
-										frameborder="0"
-										allowfullscreen="true"
+										className="normal_cad"
+										frameBorder="0"
+										allowFullScreen={true}
 										title={meta.title}
 										src={content.cad}
 									/>
