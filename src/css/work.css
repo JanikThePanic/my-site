@@ -1,0 +1,144 @@
+/* css for work page */
+
+/*  */
+/* override width and account for nav */
+/*  */
+.work-page {
+	max-width: 87%;
+	margin: 0 2em 5.5em var(--nav-width);
+}
+
+.work-page p {
+	line-height: normal !important;
+	width: auto !important;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+/*  */
+/* container of all display blocks */
+/*  */
+.displayParent {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 30px;
+	clear: both;
+	margin: 2rem 0 0 0;
+}
+
+/* grid to height on block */
+/* 4 : 13vw  full*/
+/* 3 : 18vw spilt*/
+/* 1 : 45vw mobile*/
+
+/* display blocks */
+.displayBlock {
+	position: relative;
+	display: block;
+	background-color: #eeeeee;
+	text-align: center;
+	border-radius: 1em;
+	overflow: hidden;
+	height: 13vw;
+	cursor: pointer;
+}
+
+/* image needs to fill but not over fill */
+.displayBlock > img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* give the hober gradient effect */
+.displayOverlay {
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(45deg, #00000088 30%, #ffffff44 100%);
+	width: 100%;
+	height: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+}
+.displayBlock:hover .displayOverlay {
+	opacity: 1;
+}
+
+/* little badge showing how many images are behind the thumbnail */
+/* will show 9+ if there is more than nine */
+/* will not show at all if its just one image */
+.displayCount {
+	position: absolute;
+	background-color: rgb(126, 126, 126, 0.3);
+	color: #eeeeee;
+	text-align: center;
+	height: 1.25em;
+	width: 1.25em;
+	padding: 0.25em;
+	font-size: 0.75em;
+	border-radius: 50%;
+	top: 0.5em;
+	right: 0.5em;
+}
+
+/* shows the title when hovered */
+.displayTitle {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	color: white;
+	text-align: left;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0 0 0.5em 0.75em;
+}
+.displayBlock:hover .displayTitle {
+	opacity: 1;
+}
+
+/* split screen */
+@media (max-width: 1100px) {
+	/* page */
+	.work-page {
+		max-width: 87%;
+		--text-max-width: 85%;
+	}
+
+	/*  */
+	/* display block and parent */
+	/*  */
+	/* less colums */
+	.displayParent {
+		grid-template-columns: auto auto auto;
+	}
+	/* taller boxes */
+	.displayBlock {
+		height: 18vw;
+	}
+}
+
+/* mobile jazz */
+@media screen and (max-width: 600px) {
+	/* page */
+	.work-page {
+		margin: 80px 5% 15% 5%;
+		max-width: 100%;
+	}
+
+	/*  */
+	/* display block and parent */
+	/*  */
+	/* less colums */
+	.displayParent {
+		grid-template-columns: auto;
+		margin-top: 3em;
+	}
+	/* taller boxes */
+	.displayBlock {
+		height: 45vw;
+	}
+}

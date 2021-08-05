@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 import home from "./components/pages/home";
 import projects from "./components/pages/projects/projects";
 import ProjectPage from "./components/pages/projects/ProjectPage";
-import work from "./components/pages/work";
+import work from "./components/pages/work/work";
 import blog from "./components/pages/blog";
 import thoughts from "./components/pages/thoughts";
 import contact from "./components/pages/contact";
