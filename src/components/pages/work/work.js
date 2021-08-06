@@ -10,6 +10,7 @@ function work() {
 	const [filterTerm, setFilterTerm] = useState("");
 	// state holding work display json data
 	const [workDisplay, setWorkDisplay] = useState();
+	// state holding which button is active
 	const [activeButton, setActiveButton] = useState("All");
 
 	// fetch the json file with all the work displays
