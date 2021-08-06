@@ -25,12 +25,12 @@ function work() {
 	// TEXT, COLOR, FILTER_TAG , SVG
 	// the all button filter is blank as we want everything to show
 	const neededFilterButtons = [
-		["All", "all", "", "all"],
-		["cringe", "music", "ew", ""],
-		["liyam", "anime", "epic", ""],
-		["lmao", "anime", "cool", ""],
-		["bad", "anime", "anime", ""],
-		["hey man", "anime", "anime", ""],
+		["All", "dark_gray", "", "all"],
+		["cringe", "magenta", "ew", ""],
+		["liyam", "light_green", "epic", ""],
+		["lmao", "orange", "cool", ""],
+		["bad", "red", "anime", ""],
+		["hey man", "blue", "anime", ""],
 	];
 
 	// handels when a filter button is pressed

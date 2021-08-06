@@ -210,76 +210,76 @@
 }
 
 .sort_all {
-	border: 2px solid var(--color_all);
-	color: var(--color_all);
-	background-color: var(--fill);
-	fill: var(--color_all);
+	border: 2px solid var(--color_dark_gray);
+	color: var(--color_dark_gray);
+	background-color: var(--bg-color);
+	fill: var(--color_dark_gray);
 }
 .sort_all.active,
 .sort_all:hover {
-	color: var(--fill);
-	background-color: var(--color_all);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_dark_gray);
+	fill: var(--bg-color);
 }
 .sort_movies {
-	border: 2px solid var(--color_movies);
-	color: var(--color_movies);
-	background-color: var(--fill);
-	fill: var(--color_movies);
+	border: 2px solid var(--color_blue);
+	color: var(--color_blue);
+	background-color: var(--bg-color);
+	fill: var(--color_blue);
 }
 .sort_movies.active,
 .sort_movies:hover {
-	color: var(--fill);
-	background-color: var(--color_movies);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_blue);
+	fill: var(--bg-color);
 }
 .sort_anime {
-	border: 2px solid var(--color_anime);
-	color: var(--color_anime);
-	background-color: var(--fill);
-	fill: var(--color_anime);
+	border: 2px solid var(--color_light_green);
+	color: var(--color_light_green);
+	background-color: var(--bg-color);
+	fill: var(--color_light_green);
 }
 .sort_anime.active,
 .sort_anime:hover {
-	color: var(--fill);
-	background-color: var(--color_anime);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_light_green);
+	fill: var(--bg-color);
 }
 .sort_tv {
-	border: 2px solid var(--color_tv);
-	color: var(--color_tv);
-	background-color: var(--fill);
-	fill: var(--color_tv);
+	border: 2px solid var(--color_orange);
+	color: var(--color_orange);
+	background-color: var(--bg-color);
+	fill: var(--color_orange);
 }
 .sort_tv.active,
 .sort_tv:hover {
-	color: var(--fill);
-	background-color: var(--color_tv);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_orange);
+	fill: var(--bg-color);
 }
 .sort_books {
-	border: 2px solid var(--color_books);
-	color: var(--color_books);
-	background-color: var(--fill);
-	fill: var(--color_books);
+	border: 2px solid var(--color_red);
+	color: var(--color_red);
+	background-color: var(--bg-color);
+	fill: var(--color_red);
 }
 .sort_books.active,
 .sort_books:hover {
-	color: var(--fill);
-	background-color: var(--color_books);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_red);
+	fill: var(--bg-color);
 }
 .sort_music {
-	border: 2px solid var(--color_music);
-	color: var(--color_music);
-	background-color: var(--fill);
-	fill: var(--color_music);
+	border: 2px solid var(--color_magenta);
+	color: var(--color_magenta);
+	background-color: var(--bg-color);
+	fill: var(--color_magenta);
 }
 .sort_music.active,
 .sort_music:hover {
-	color: var(--fill);
-	background-color: var(--color_music);
-	fill: var(--fill);
+	color: var(--bg-color);
+	background-color: var(--color_magenta);
+	fill: var(--bg-color);
 }
 
 /* sport by select element */

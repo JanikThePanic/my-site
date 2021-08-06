@@ -16,8 +16,8 @@ function FilterButton(props) {
 	const hoveredFilterButtonStyles = {
 		backgroundColor: "var(--color_" + props.color + ")",
 		borderColor: "var(--color_" + props.color + ")",
-		fill: "var(--fill)",
-		color: "var(--fill)",
+		fill: "var(--bg-color)",
+		color: "var(--bg-color)",
 	};
 
 	// hold the svg paths we'll need for this button
