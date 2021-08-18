@@ -15,7 +15,6 @@ function projects() {
 
 			<ul className="project-list">
 				<ProjectItem refName="rc-ultimate" />
-				<ProjectItem refName="laika" />
 				<ProjectItem refName="macrobox_v2" />
 				<ProjectItem refName="macrobox_v1" />
 				<ProjectItem refName="frc2020" />
