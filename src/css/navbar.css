@@ -8,6 +8,15 @@
 	top: 0;
 	left: 0;
 	overflow-x: hidden;
+
+	/* hide scroll bar */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* hide scrollbar */
+.nav::-webkit-scrollbar {
+	display: none;
 }
 
 .navList {

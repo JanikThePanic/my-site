@@ -25,15 +25,11 @@ body {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #f1f1f1;
+	background: var(--fill);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: gray;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: var(--color);
 }
 
 body {
@@ -96,5 +92,10 @@ hr {
 	}
 	p {
 		width: 100% !important;
+	}
+	/* scroll bar */
+	/* width */
+	::-webkit-scrollbar {
+		width: 6px;
 	}
 }
