@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import DisplayBlock from "./DisplayBlock";
+import LargeDisplay from "./LargeDisplay";
 import FilterButton from "../../FilterButton";
 import "../../../css/work.css";
 import "../../../css/filter&sort.css";
@@ -14,6 +15,8 @@ function work() {
 	const [sortingMethod, setSoringMethod] = useState("newest");
 	// state holding which button is active
 	const [activeButton, setActiveButton] = useState("All");
+	// state to control which work we are displaying if any
+	const [activeDisplay, setActiveDisplay] = useState();
 
 	// fetch the json file with all the work displays
 	useEffect(() => {
@@ -143,6 +146,9 @@ function work() {
 									key={key}
 									count={Object.keys(display.images).length}
 									thumbnail={display.images[0]}
+									onClick={() => {
+										setActiveDisplay(display.title);
+									}}
 								/>
 							);
 						})
@@ -151,6 +157,9 @@ function work() {
 					<p>Issues loading work page. Please contact admin.</p>
 				)}
 			</div>
+
+			{/* if somethings is actively displayed */}
+			{activeDisplay ? <LargeDisplay /> : null}
 		</div>
 	);
 }

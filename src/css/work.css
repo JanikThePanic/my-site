@@ -30,10 +30,13 @@
 
 /* grid to height on block */
 /* 4 : 13vw  full*/
-/* 3 : 18vw spilt*/
+/* 2 : 29vw spilt*/
 /* 1 : 45vw mobile*/
 
+/*  */
 /* display blocks */
+/* they show thumbnails of all the work */
+/*  */
 .displayBlock {
 	position: relative;
 	display: block;
@@ -92,7 +95,7 @@
 	opacity: 0;
 	color: white;
 	text-align: left;
-	font-size: 2em;
+	font-size: 2vw;
 	font-weight: bold;
 	padding: 0 0 0.5em 0.75em;
 }
@@ -100,7 +103,28 @@
 	opacity: 1;
 }
 
+/*  */
+/* large display of work with full info and details */
+/* :D */
+/*  */
+.largeDisplay {
+	display: block;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background: var(--mobile-nav);
+	backdrop-filter: blur(5px);
+	overflow-x: hidden;
+	transition: 0.5s;
+	text-align: center;
+}
+
+/*  */
 /* split screen */
+/*  */
 @media (max-width: 1100px) {
 	/* page */
 	.work-page {
@@ -113,15 +137,22 @@
 	/*  */
 	/* less colums */
 	.displayParent {
-		grid-template-columns: auto auto auto;
+		grid-template-columns: auto auto;
 	}
 	/* taller boxes */
 	.displayBlock {
-		height: 18vw;
+		height: 19vw;
+	}
+	/* how title on spil cuz ipad cant hover */
+	.displayOverlay,
+	.displayTitle {
+		opacity: 1;
 	}
 }
 
+/*  */
 /* mobile jazz */
+/*  */
 @media screen and (max-width: 600px) {
 	/* page */
 	.work-page {
@@ -145,5 +176,6 @@
 	.displayOverlay,
 	.displayTitle {
 		opacity: 1;
+		font-size: 1.6em;
 	}
 }
