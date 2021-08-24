@@ -171,6 +171,10 @@ function work() {
 					}}
 				/>
 			) : null}
+			{/* lock scroll when display is up */}
+			{activeDisplay
+				? document.body.classList.add("noscroll")
+				: document.body.classList.remove("noscroll")}
 		</div>
 	);
 }

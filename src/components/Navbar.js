@@ -5,10 +5,12 @@ import "../css/navbar.css";
 // opens and closes the nav on mobile
 function openNav() {
 	document.getElementById("mySidenav").style.height = "100%";
+	document.body.classList.add("noscroll");
 }
 
 function closeNav() {
 	document.getElementById("mySidenav").style.height = "0";
+	document.body.classList.remove("noscroll");
 }
 
 // on mobile, when you click, menu should be gone
