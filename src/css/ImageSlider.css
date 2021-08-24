@@ -9,7 +9,7 @@
 	margin: 1em 0 1em 0;
 	padding: none;
 	position: relative;
-	height: 35em;
+	height: 30em;
 }
 /* slide */
 .image-slide {
@@ -74,7 +74,7 @@
 @media screen and (max-width: 600px) {
 	/* container */
 	.container-slider {
-		height: 23em;
+		height: 20em;
 	}
 	/* btns */
 	.btn-slide {

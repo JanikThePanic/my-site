@@ -118,6 +118,13 @@
 	background: var(--bg-color-non-focus);
 	backdrop-filter: blur(5px);
 	overflow-x: hidden;
+	/* hide scroll bar */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+/* hide scrollbar */
+.largeDisplay::-webkit-scrollbar {
+	display: none;
 }
 .largeDisplayBlock {
 	position: relative;
