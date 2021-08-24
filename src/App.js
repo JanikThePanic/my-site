@@ -20,7 +20,7 @@ import friend from "./components/pages/friend";
 
 function App() {
 	// stfu, i know the last link element in nav doesnt have a to= just stfu
-	// console.log = console.warn = console.error = () => {};
+	console.log = console.warn = console.error = () => {};
 
 	// i stole this code from https://www.w3schools.com/js/js_cookies.asp
 	// thats why it is shit
