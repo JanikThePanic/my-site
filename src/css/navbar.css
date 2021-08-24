@@ -1,7 +1,7 @@
 /* stylesheet purely for the navbar */
 
 .nav {
-	height: 125%;
+	height: 100%;
 	width: var(--nav-width);
 	position: fixed;
 	z-index: 100;
@@ -92,7 +92,7 @@ Link:hover {
 		transition: 0.3s;
 	}
 	.navList {
-		margin: 30% 0 0 0;
+		margin: 20% 0 0 0;
 		display: block;
 		width: 100%;
 	}
