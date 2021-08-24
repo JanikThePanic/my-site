@@ -6,11 +6,15 @@ import FilterButton from "../../FilterButton";
 import "../../../css/work.css";
 import "../../../css/filter&sort.css";
 
+// note for later
+// make display check if the thumbnail is interal or external img
+// same with the actual imgs in slider
+
 function work() {
-	// state holding filter properties
-	const [filterTerm, setFilterTerm] = useState("");
 	// state holding work display json data
 	const [workDisplay, setWorkDisplay] = useState();
+	// state holding filter properties
+	const [filterTerm, setFilterTerm] = useState("");
 	// state for what we are sorting by
 	const [sortingMethod, setSoringMethod] = useState("newest");
 	// state holding which button is active
@@ -147,7 +151,7 @@ function work() {
 									count={Object.keys(display.images).length}
 									thumbnail={display.images[0]}
 									onClick={() => {
-										setActiveDisplay(display.title);
+										setActiveDisplay(display);
 									}}
 								/>
 							);
@@ -159,7 +163,14 @@ function work() {
 			</div>
 
 			{/* if somethings is actively displayed */}
-			{activeDisplay ? <LargeDisplay /> : null}
+			{activeDisplay ? (
+				<LargeDisplay
+					displayObject={activeDisplay}
+					close={() => {
+						setActiveDisplay(null);
+					}}
+				/>
+			) : null}
 		</div>
 	);
 }
