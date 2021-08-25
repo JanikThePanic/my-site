@@ -29,7 +29,9 @@ export default function LargeDisplay(props) {
 					{/* title on top */}
 					<div className="title">{work.title}</div>
 					{/* image slider */}
-					<ImageSlider title={work.title} images={work.images} />
+					<div className="images">
+						<ImageSlider title={work.title} images={work.images} />
+					</div>
 					Test here
 				</div>
 			) : (

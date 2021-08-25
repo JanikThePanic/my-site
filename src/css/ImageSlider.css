@@ -6,10 +6,9 @@
 
 /* container */
 .container-slider {
-	margin: 1em 0 1em 0;
 	padding: none;
 	position: relative;
-	height: 30em;
+	height: 100%;
 }
 /* slide */
 .image-slide {
@@ -72,10 +71,6 @@
 /* mobile jazz */
 /*  */
 @media screen and (max-width: 600px) {
-	/* container */
-	.container-slider {
-		height: 20em;
-	}
 	/* btns */
 	.btn-slide {
 		height: 3em;

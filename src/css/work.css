@@ -158,6 +158,11 @@
 	max-width: 75%;
 	overflow: visible;
 }
+/* css for cotaining image slider */
+.largeDisplayBlock .images {
+	margin: 1em 0 1em 0;
+	height: 30em;
+}
 
 /*  */
 /* split screen */
@@ -221,5 +226,9 @@
 	.largeDisplayBlock .closeButton {
 		font-size: 3em;
 		top: 0.1em;
+	}
+	/* css for cotaining image slider */
+	.largeDisplayBlock .images {
+		height: 20em;
 	}
 }
