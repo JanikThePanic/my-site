@@ -16,6 +16,26 @@ export default function LargeDisplay(props) {
 		}
 	}
 
+	// setup date of work
+	if (work) {
+		const monthNames = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December",
+		];
+		var dateOBJ = new Date(work.date);
+		var dateMonth = monthNames[dateOBJ.getMonth()];
+	}
+
 	return (
 		// whole screen kinda block, it just blurs with css and when click closes
 		<div className="largeDisplay" onClick={handleClick}>
@@ -32,7 +52,31 @@ export default function LargeDisplay(props) {
 					<div className="images">
 						<ImageSlider title={work.title} images={work.images} />
 					</div>
-					Test here
+					{/* actual text content now */}
+					<div className="content">
+						{/* software used and date line */}
+						<span className="software-date">
+							Made in {work.software}
+							{" | "}
+							{dateMonth +
+								" " +
+								dateOBJ.getDate() +
+								", " +
+								dateOBJ.getFullYear()}
+						</span>
+						{/* time of creation */}
+						<span className="date"></span>
+						{/* tags of work */}
+						{work.tags.map((tag) => {
+							return (
+								<span className="tag" key={tag}>
+									{tag}
+								</span>
+							);
+						})}
+						{/* description */}
+						<div className="description">{work.description}</div>
+					</div>
 				</div>
 			) : (
 				/* failed to load */

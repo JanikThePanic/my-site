@@ -160,8 +160,29 @@
 }
 /* css for cotaining image slider */
 .largeDisplayBlock .images {
-	margin: 1em 0 1em 0;
+	margin-top: 1.5em;
 	height: 30em;
+}
+
+/*  */
+/* actual texty content of lare display */
+/*  */
+/* genral container */
+.largeDisplayBlock .content {
+	margin: 1em 4em;
+	margin-bottom: 5em;
+}
+.content .tag {
+	background-color: var(--color_dark_gray);
+	color: var(--bg-color);
+	font-weight: bold;
+	margin-right: 0.5em;
+	border-radius: 4px;
+	padding: 3px 8px;
+	float: right;
+}
+.content .description {
+	margin-top: 1em;
 }
 
 /*  */
@@ -220,6 +241,7 @@
 	/*  */
 	/* title */
 	.largeDisplayBlock .title {
+		padding-left: 0.75em;
 		font-size: 2em !important;
 	}
 	/* close button */
@@ -229,6 +251,22 @@
 	}
 	/* css for cotaining image slider */
 	.largeDisplayBlock .images {
-		height: 20em;
+		height: 18em;
+	}
+	/* genral container */
+	.largeDisplayBlock .content {
+		margin: 1em 1em;
+		margin-bottom: 4em;
+	}
+	.content .software-date {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.content .tag {
+		float: left;
+		margin-bottom: 10px;
+	}
+	.content .description {
+		clear: both;
 	}
 }
