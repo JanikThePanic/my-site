@@ -33,11 +33,11 @@ function work() {
 	// the all button filter is blank as we want everything to show
 	const neededFilterButtons = [
 		["All", "dark_gray", "", "all"],
-		["ew", "magenta", "ew", ""],
-		["epic", "light_green", "epic", ""],
-		["cool", "orange", "cool", ""],
-		["anime", "red", "anime", ""],
-		["kanime", "blue", "anime", ""],
+		["Photoshop", "magenta", "photoshop", ""],
+		["Illustrator", "light_green", "illustrator", ""],
+		["Blender", "orange", "blender", ""],
+		["SolidWorks", "red", "solidworks", ""],
+		["Onshape", "blue", "onshape", ""],
 	];
 
 	// handels when a filter button is pressed
@@ -129,7 +129,9 @@ function work() {
 								return display;
 							} else if (
 								display.tags.some(
-									(tag) => tag.toLowerCase() === filterTerm
+									(tag) =>
+										tag.toLowerCase() ===
+										filterTerm.toLowerCase()
 								)
 							) {
 								return display;
