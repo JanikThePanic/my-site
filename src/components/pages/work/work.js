@@ -6,6 +6,9 @@ import FilterButton from "../../FilterButton";
 import "../../../css/work.css";
 import "../../../css/filter&sort.css";
 
+// note for images
+// 4:3 at 2048×1536 is nice
+
 function work() {
 	// state holding work display json data
 	const [workDisplay, setWorkDisplay] = useState();

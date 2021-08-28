@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import SliderButton from "./SliderButton";
 import "../../css/ImageSlider.css";
 
@@ -42,9 +42,14 @@ export default function ImageSlider(props) {
 				);
 			})}
 
-			{/* buttons to change imgs */}
-			<SliderButton onClick={nextSlide} direction={"next"} />
-			<SliderButton onClick={prevSlide} direction={"prev"} />
+			{/* if not single img */}
+			{props.images.length !== 1 ? (
+				// buttons to change imgs
+				<Fragment>
+					<SliderButton onClick={nextSlide} direction={"next"} />
+					<SliderButton onClick={prevSlide} direction={"prev"} />
+				</Fragment>
+			) : null}
 		</div>
 	);
 }
