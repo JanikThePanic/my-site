@@ -7,6 +7,15 @@ export default function LargeDisplay(props) {
 	// work display object passed from page compoent
 	const work = props.displayObject;
 
+	// create copy of image strings, incase some are internal
+	var images = work.images;
+	// run thru images and add link if needed
+	for (var i = 0; i < images.length; i++) {
+		if (!images[i].includes("http")) {
+			images[i] = "https://janik.codes/dependencies/work/" + images[i];
+		}
+	}
+
 	// handels clicking of block
 	function handleClick(event) {
 		let clicked = event.target.className;
@@ -50,7 +59,7 @@ export default function LargeDisplay(props) {
 					<div className="title">{work.title}</div>
 					{/* image slider */}
 					<div className="images">
-						<ImageSlider title={work.title} images={work.images} />
+						<ImageSlider title={work.title} images={images} />
 					</div>
 					{/* actual text content now */}
 					<div className="content">

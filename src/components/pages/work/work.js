@@ -6,10 +6,6 @@ import FilterButton from "../../FilterButton";
 import "../../../css/work.css";
 import "../../../css/filter&sort.css";
 
-// note for later
-// make display check if the thumbnail is interal or external img
-// same with the actual imgs in slider
-
 function work() {
 	// state holding work display json data
 	const [workDisplay, setWorkDisplay] = useState();
