@@ -82,6 +82,7 @@ function App() {
 								--m-color: #a8a095;
 								--mobile-nav: rgba(24, 26, 27, 0.75);
 								--bg-color-non-focus: rgba(38, 41, 42, 0.75);
+								--odd-light-gray: #222426;
 
 								--color_dark_gray: #d0ccc6;
 								--color_blue: #2fd3f6;
@@ -98,6 +99,7 @@ function App() {
 								--m-color: #999999;
 								--mobile-nav: rgba(255, 255, 255, 0.75);
 								--bg-color-non-focus: rgba(50, 50, 50, 0.75);
+								--odd-light-gray: #eeeeee;
 
 								--color_dark_gray: #1e272e;
 								--color_blue: #0abde3;
