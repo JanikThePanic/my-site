@@ -4,7 +4,7 @@
 			"title": "Weaponry",
 			"date": "2020-06-23T17:00:35.000Z",
 			"tags": ["Blender"],
-			"coolness": 55,
+			"coolness": 65,
 			"images": [
 				"wp_long_sword.png",
 				"wp_great_sword.png",
@@ -19,7 +19,7 @@
 			"title": "McDonald's",
 			"date": "2021-03-15T17:30:23.000Z",
 			"tags": ["Onshape", "Made for School"],
-			"coolness": 50,
+			"coolness": 51,
 			"images": ["mc_shaded.png", "mc_lines.png", "mc_og.jpg"],
 			"software": "Onshape",
 			"description": "Mini golf course modeled after the first McDonald's."
@@ -42,10 +42,32 @@
 			"title": "Turret",
 			"date": "2020-05-19T17:30:23.000Z",
 			"tags": ["Blender"],
-			"coolness": 45,
+			"coolness": 35,
 			"images": ["voltz_turret_front.png", "voltz_turret_back.png"],
 			"software": "Blender",
 			"description": "Futuristic turret made in Blender for a Roblox game."
+		},
+		{
+			"title": "Robot",
+			"date": "2021-04-01T17:30:23.000Z",
+			"tags": ["Onshape", "Made for School"],
+			"coolness": 55,
+			"images": [
+				"sus_shade.png",
+				"sus_bad_shade.png",
+				"sus_lines.png",
+				"sus_static.png",
+				"sus_static_lines.png",
+				"sus_arm.png",
+				"sus_page_all.jpg",
+				"sus_page_full.jpg",
+				"sus_page_arm.jpg",
+				"sus_page_hand.jpg",
+				"sus_page_finger.jpg",
+				"sus_page_leg.jpg"
+			],
+			"software": "Onshape",
+			"description": "Cool little figurine robot modelled after some Google Images."
 		}
 	]
 }
