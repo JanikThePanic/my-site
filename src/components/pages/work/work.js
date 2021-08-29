@@ -60,7 +60,7 @@ function work() {
 	function compare(a, b) {
 		// if we are sorting by coolness facto
 		if (sortingMethod === "coolness") {
-			return a.coolness - b.coolness;
+			return b.coolness - a.coolness;
 		}
 		// newest
 		else if (sortingMethod === "newest") {
