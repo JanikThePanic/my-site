@@ -178,7 +178,7 @@
 	margin-bottom: 5em;
 }
 .content .tag {
-	background-color: var(--color_dark_gray);
+	background-color: var(--m-color);
 	color: var(--bg-color);
 	font-weight: bold;
 	margin-right: 0.5em;
