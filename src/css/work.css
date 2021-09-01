@@ -189,6 +189,10 @@
 .content .description {
 	margin-top: 1em;
 }
+.content a {
+	display: block;
+	margin-top: 1em;
+}
 
 /*  */
 /* split screen */

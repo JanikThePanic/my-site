@@ -61,7 +61,8 @@ function FilterButton(props) {
 						viewBox={
 							props.icon !== "book"
 								? "-42 164 514 514"
-								: "-202 164 514 514"
+								: // defualt ⬇️
+								  "-202 164 514 514"
 						}
 						dangerouslySetInnerHTML={{ __html: buttonSVG }}
 					></svg>

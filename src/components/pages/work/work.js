@@ -37,10 +37,11 @@ function work() {
 	const neededFilterButtons = [
 		["All", "dark_gray", "", "all"],
 		["Photoshop", "magenta", "photoshop", ""],
+		["Onshape", "blue", "onshape", ""],
 		["Illustrator", "light_green", "illustrator", ""],
+		["Python", "sun_flower", "python", ""],
 		["Blender", "orange", "blender", ""],
 		["SolidWorks", "red", "solidworks", ""],
-		["Onshape", "blue", "onshape", ""],
 	];
 
 	// handels when a filter button is pressed

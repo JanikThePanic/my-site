@@ -85,6 +85,16 @@ export default function LargeDisplay(props) {
 						})}
 						{/* description */}
 						<div className="description">{work.description}</div>
+						{/* if theres an external link */}
+						{work.link ? (
+							<a
+								href={work.link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								More Info
+							</a>
+						) : null}
 					</div>
 				</div>
 			) : (

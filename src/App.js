@@ -90,6 +90,7 @@ function App() {
 								--color_orange: #ffa248;
 								--color_red: #d86161;
 								--color_magenta: #d66dc8;
+								--color_sun_flower: #fbc531;
 					}`
 							: `:root {
 								--bg-color: white;
@@ -107,6 +108,7 @@ function App() {
 								--color_orange: #ff9f43;
 								--color_red: #d65858;
 								--color_magenta: #d467c6;
+								--color_sun_flower: #fbc531;
 					}`,
 					}}
 				/>
