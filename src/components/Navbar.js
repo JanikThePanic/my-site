@@ -29,7 +29,7 @@ function navbar(props) {
 					<Link to="/projects">Projects</Link>
 					<Link to="/work">Work</Link>
 					<Link to="/blog">Blog</Link>
-					<Link to="/thoughts">Thoughts</Link>
+					{/* <Link to="/thoughts">Thoughts</Link> */}
 					<a href={process.env.PUBLIC_URL + "/assets/Resume.pdf"}>
 						Resume
 					</a>
