@@ -13,7 +13,7 @@ function contact() {
 			<p>
 				{/* Work: <a href="mailto:j4abdull@uwaterloo.ca">j4abdull@uwaterloo.ca</a> <br /> */}
 				Personal:{" "}
-				<a href="mailto:jk4abdl@gmail.com">jk4abdl@gmail.com</a>
+				<a href="mailto:janik@janik.codes">janik@janik.codes</a>
 				<br />
 				Phone: <a href="tel:+1-226-978-5283">+1 (226) 978 - 5283</a>
 			</p>
