@@ -13,7 +13,6 @@ import projects from "./components/pages/projects/projects";
 import ProjectPage from "./components/pages/projects/ProjectPage";
 import work from "./components/pages/work/work";
 import blog from "./components/pages/blog";
-import thoughts from "./components/pages/thoughts";
 import contact from "./components/pages/contact";
 import NotFoundPage from "./components/pages/404";
 import friend from "./components/pages/friend";
@@ -123,7 +122,6 @@ function App() {
 					{/* other pages */}
 					<Route path="/work" component={work} />
 					<Route path="/blog" component={blog} />
-					<Route path="/thoughts" component={thoughts} />
 					<Route path="/contact" component={contact} />
 					{/* fun easteregg */}
 					<Route path="/friends/:refName" component={friend} />
