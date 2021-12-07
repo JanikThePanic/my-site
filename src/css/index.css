@@ -4,6 +4,7 @@
 :root {
 	/* Typography */
 	font-family: "Roboto Mono", IBM Plex Sans, sans-serif;
+	--font: "Roboto Mono", IBM Plex Sans, sans-serif;
 
 	/* widths (with the navbar and all that) */
 	--nav-width: 190px;
