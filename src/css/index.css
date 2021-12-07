@@ -3,7 +3,7 @@
 /* varibles for colours, fonts, and other */
 :root {
 	/* Typography */
-	--font: "IBM Plex Sans", sans-serif;
+	font-family: "Roboto Mono", IBM Plex Sans, sans-serif;
 
 	/* widths (with the navbar and all that) */
 	--nav-width: 190px;
@@ -67,7 +67,7 @@ a:hover {
 
 /* page titles */
 .page-title {
-	font-size: 72px;
+	font-size: 5em;
 	font-weight: bold;
 	margin: 2rem 0 0 0;
 }
@@ -81,9 +81,6 @@ hr {
 
 /* split screen */
 @media (max-width: 1100px) {
-	.page-title {
-		font-size: 56px;
-	}
 	.page {
 		max-width: 100%;
 		--text-max-width: 85%;
@@ -92,6 +89,9 @@ hr {
 
 /* mobile jazz */
 @media screen and (max-width: 600px) {
+	.page-title {
+		font-size: 2em;
+	}
 	.page {
 		margin: 80px 5% 15% 5%;
 		max-width: 100%;
