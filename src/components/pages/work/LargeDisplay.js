@@ -19,15 +19,9 @@ export default function LargeDisplay(props) {
 	}, []);
 
 	// if we hit the back button on mobile, i just wanna close the current work displayed
-	useEffect(() => {
-		const backHandler = BackHandler.addEventListener(
-			"hardwareBackPress",
-			() => {
-				props.close();
-			}
-		);
-		return () => backHandler.remove();
-	}, []);
+	//
+	// need to figure out
+	//
 
 	// const for easy referance
 	// work display object passed from page compoent
