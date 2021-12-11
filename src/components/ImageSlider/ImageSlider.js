@@ -20,7 +20,7 @@ export default function ImageSlider(props) {
 		return () => {
 			document.removeEventListener("keydown", handle);
 		};
-	}, []);
+	});
 
 	// state hook holding index of active image
 	const [slideIndex, setSlideIndex] = useState(0);

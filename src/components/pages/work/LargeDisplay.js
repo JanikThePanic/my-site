@@ -16,7 +16,7 @@ export default function LargeDisplay(props) {
 		return () => {
 			document.removeEventListener("keydown", handle);
 		};
-	}, []);
+	});
 
 	// if we hit the back button on mobile, i just wanna close the current work displayed
 	//
