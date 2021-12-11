@@ -30,7 +30,11 @@ function navbar(props) {
 					<Link to="/work">Work</Link>
 					<Link to="/blog">Blog</Link>
 					{/* <Link to="/thoughts">Thoughts</Link> */}
-					<a href={process.env.PUBLIC_URL + "/assets/Resume.pdf"}>
+					<a
+						href={
+							process.env.PUBLIC_URL + "/dependencies/Resume.pdf"
+						}
+					>
 						Resume
 					</a>
 					<Link to="/contact">Contact</Link>
