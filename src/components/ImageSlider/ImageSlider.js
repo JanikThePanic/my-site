@@ -1,8 +1,27 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import SliderButton from "./SliderButton";
 import "../../css/ImageSlider.css";
 
 export default function ImageSlider(props) {
+	// magic voodoo from an indian guy on yt
+	useEffect(() => {
+		function handle(event) {
+			// left we go back
+			if (event.code === "ArrowLeft") {
+				prevSlide();
+			}
+			// right forward
+			if (event.code === "ArrowRight") {
+				nextSlide();
+			}
+			// esc we go out
+		}
+		document.addEventListener("keydown", handle);
+		return () => {
+			document.removeEventListener("keydown", handle);
+		};
+	}, []);
+
 	// state hook holding index of active image
 	const [slideIndex, setSlideIndex] = useState(0);
 

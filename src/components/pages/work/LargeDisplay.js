@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { BackHandler } from "react-native";
 import ImageSlider from "../../ImageSlider/ImageSlider";
 import "../../../css/work.css";
 
 export default function LargeDisplay(props) {
+	// magic voodoo from an indian guy on yt
+	useEffect(() => {
+		function handle(event) {
+			// esc we go out
+			if (event.code === "Escape") {
+				props.close();
+			}
+		}
+		document.addEventListener("keydown", handle);
+		return () => {
+			document.removeEventListener("keydown", handle);
+		};
+	}, []);
+
+	// if we hit the back button on mobile, i just wanna close the current work displayed
+	useEffect(() => {
+		const backHandler = BackHandler.addEventListener(
+			"hardwareBackPress",
+			() => {
+				props.close();
+			}
+		);
+		return () => backHandler.remove();
+	}, []);
+
 	// const for easy referance
 	// work display object passed from page compoent
 	const work = props.displayObject;
