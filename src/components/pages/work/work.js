@@ -31,14 +31,15 @@ function work() {
 	// you dont go back in history,
 	// instead you just go back to the display of work
 
+	// listens if the url changes
 	// if there is not #viewing, i dont want anything up
-	React.useEffect(() => {
-		window.onpopstate = (e) => {
+	useEffect(() => {
+		return history.listen((location) => {
 			if (window.location.href === "/work") {
 				setActiveDisplay(null);
 			}
-		};
-	});
+		});
+	}, [history]);
 
 	// fetch the json file with all the work displays
 	useEffect(() => {
