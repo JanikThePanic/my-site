@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import DisplayBlock from "./DisplayBlock";
 import LargeDisplay from "./LargeDisplay";
@@ -20,6 +21,22 @@ function work() {
 	const [activeButton, setActiveButton] = useState("All");
 	// state to control which work we are displaying if any
 	const [activeDisplay, setActiveDisplay] = useState();
+	// imma use this to set #viewing state
+	const history = useHistory();
+
+	// both 👆 and 👇 i need so when on mobile,
+	// if you hit the andriod back button,
+	// you dont go back in history,
+	// instead you just go back to the display of work
+
+	// if there is not #viewing, i dont want anything up
+	React.useEffect(() => {
+		window.onpopstate = (e) => {
+			if (window.location.href === "/work") {
+				setActiveDisplay(null);
+			}
+		};
+	});
 
 	// fetch the json file with all the work displays
 	useEffect(() => {
@@ -153,6 +170,8 @@ function work() {
 									count={Object.keys(display.images).length}
 									thumbnail={display.images[0]}
 									onClick={() => {
+										// we about to view something
+										history.push("/work#viewing");
 										setActiveDisplay(display);
 									}}
 								/>
@@ -169,6 +188,8 @@ function work() {
 				<LargeDisplay
 					displayObject={activeDisplay}
 					close={() => {
+						// no longer viewing a thing, so lets get rid of #viewing
+						history.push("/work");
 						setActiveDisplay(null);
 					}}
 				/>

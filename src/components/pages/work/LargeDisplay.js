@@ -17,11 +17,6 @@ export default function LargeDisplay(props) {
 		};
 	});
 
-	// if we hit the back button on mobile, i just wanna close the current work displayed
-	//
-	// need to figure out
-	//
-
 	// const for easy referance
 	// work display object passed from page compoent
 	const work = props.displayObject;
