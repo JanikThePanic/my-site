@@ -123,13 +123,13 @@ function work() {
 
 			<br />
 
-			{/* container for all the blocks */}
-			<div className="displayParent">
-				{/* map all the json work displays to the componets */}
-				{/* but before it maps, it filters the objects 
+			{/* map all the json work displays to the componets */}
+			{/* but before it maps, it filters the objects 
 				based on the filter. anything that has the filter passes*/}
-				{workDisplay ? (
-					workDisplay
+			{workDisplay ? (
+				// container for all the blocks
+				<div className="displayParent">
+					{workDisplay
 						.filter((display) => {
 							if (filterTerm === "") {
 								return display;
@@ -159,12 +159,12 @@ function work() {
 									}}
 								/>
 							);
-						})
-				) : (
-					// if there is an issue loading the json
-					<p>Issues loading work page. Please contact admin.</p>
-				)}
-			</div>
+						})}
+				</div>
+			) : (
+				// if there is an issue loading the json
+				<p>Issues loading work page. Please contact admin.</p>
+			)}
 
 			{/* if somethings is actively displayed */}
 			{activeDisplay ? (
