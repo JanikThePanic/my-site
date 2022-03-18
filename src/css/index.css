@@ -3,8 +3,8 @@
 /* varibles for colours, fonts, and other */
 :root {
 	/* Typography */
-	font-family: "Roboto Mono", IBM Plex Sans, sans-serif;
-	--font: "Roboto Mono", IBM Plex Sans, sans-serif;
+	font-family: "IBM Plex Serif Light", serif;
+	--font: "IBM Plex Serif Light", serif;
 
 	/* widths (with the navbar and all that) */
 	--nav-width: 190px;

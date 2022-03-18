@@ -11,7 +11,7 @@ function projects() {
 				<title>Projects | Jahangir Abdullayev</title>
 			</Helmet>
 
-			<h1 className="page-title">Projects</h1>
+			<h1 className="page-title">projects</h1>
 
 			<ul className="project-list">
 				<ProjectItem refName="rc-ultimate" />
