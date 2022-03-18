@@ -5,9 +5,9 @@ function home() {
 	return (
 		<div className="page">
 			<Helmet>
-				<title>Jahangir Abdullayev</title>
+				<title>jahangir abdullayev.</title>
 			</Helmet>
-			<h1 className="page-title">Jahangir Abdullayev</h1>
+			<h1 className="page-title">jahangir abdullayev.</h1>
 
 			<p>
 				My name is Jahangir Abdullayev, Janik for short. I am a Canadian

@@ -25,19 +25,19 @@ function navbar(props) {
 		<div>
 			<div id="mySidenav" className="nav" onClick={checkForMobile}>
 				<div className="navList">
-					<Link to="/">Home</Link>
-					<Link to="/projects">Projects</Link>
-					<Link to="/work">Work</Link>
-					<Link to="/blog">Blog</Link>
+					<Link to="/">home</Link>
+					<Link to="/projects">projects</Link>
+					<Link to="/work">work</Link>
+					<Link to="/blog">blog</Link>
 					{/* <Link to="/thoughts">Thoughts</Link> */}
 					<a
 						href={
 							process.env.PUBLIC_URL + "/dependencies/Resume.pdf"
 						}
 					>
-						Resume
+						resume
 					</a>
-					<Link to="/contact">Contact</Link>
+					<Link to="/contact">contact</Link>
 					<Link className="closebtn" onClick={closeNav}>
 						&times;
 					</Link>
@@ -46,7 +46,7 @@ function navbar(props) {
 
 					{/* button to switch themes */}
 					<Link className="theme-button" onClick={props.toggleTheme}>
-						Theme
+						theme
 					</Link>
 				</div>
 			</div>

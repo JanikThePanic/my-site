@@ -8,7 +8,7 @@ function projects() {
 	return (
 		<div className="page">
 			<Helmet>
-				<title>Projects | Jahangir Abdullayev</title>
+				<title>projects - janik</title>
 			</Helmet>
 
 			<h1 className="page-title">projects</h1>

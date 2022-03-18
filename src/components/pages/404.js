@@ -5,9 +5,9 @@ function NotFoundPage() {
 	return (
 		<div className="page">
 			<Helmet>
-				<title>404 | Jahangir Abdullayev</title>
+				<title>youre lost</title>
 			</Helmet>
-			<h1 className="page-title">Error 404</h1>
+			<h1 className="page-title">404</h1>
 
 			<p>You appear lost.</p>
 			<p>This page does not seam to exist.</p>

@@ -7,9 +7,9 @@ function contact() {
 	return (
 		<div className="page">
 			<Helmet>
-				<title>Contact | Jahangir Abdullayev</title>
+				<title>contact - janik</title>
 			</Helmet>
-			<h1 className="page-title">Contact</h1>
+			<h1 className="page-title">contact me</h1>
 			<p>
 				{/* Work: <a href="mailto:j4abdull@uwaterloo.ca">j4abdull@uwaterloo.ca</a> <br /> */}
 				Personal:{" "}
@@ -27,7 +27,7 @@ function contact() {
 				>
 					JanikThePanic
 				</a>
-				<br />
+				{/* <br />
 				Fiverr:{" "}
 				<a
 					href="https://www.fiverr.com/janikdesign"
@@ -35,7 +35,7 @@ function contact() {
 					rel="noopener noreferrer"
 				>
 					JanikDesign
-				</a>
+				</a> */}
 				<br />
 				EasyEDA:{" "}
 				<a

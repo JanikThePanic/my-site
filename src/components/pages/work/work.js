@@ -83,9 +83,9 @@ function work() {
 	return (
 		<div className="work-page">
 			<Helmet>
-				<title>Work | Jahangir Abdullayev</title>
+				<title>work - janik</title>
 			</Helmet>
-			<h1 className="page-title">Work</h1>
+			<h1 className="page-title">work</h1>
 
 			<br />
 

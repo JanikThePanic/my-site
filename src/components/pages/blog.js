@@ -6,9 +6,9 @@ function blog() {
 	return (
 		<div className="page">
 			<Helmet>
-				<title>Blog | Jahangir Abdullayev</title>
+				<title>blog - janik</title>
 			</Helmet>
-			<h1 className="page-title">Blog</h1>
+			<h1 className="page-title">blog</h1>
 
 			<div className="blog-page">
 				<ul id="BlogGoesHere" onLoad={loadXML()}>
