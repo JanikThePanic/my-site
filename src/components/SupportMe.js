@@ -6,15 +6,15 @@ function SupportMe() {
 			<br />
 
 			{/* if you are seeing this, pls donate */}
-			<h2>Support Me</h2>
+			<h2>☕ buy me a coffee ☕</h2>
 			<p>
-				Support my projects at{" "}
+				paypal.me/
 				<a
 					href="https://www.paypal.me/thejanik"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					paypal.me/thejanik
+					thejanik
 				</a>
 			</p>
 		</Fragment>

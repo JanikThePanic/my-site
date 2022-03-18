@@ -9,10 +9,10 @@ function NotFoundPage() {
 			</Helmet>
 			<h1 className="page-title">404</h1>
 
-			<p>You appear lost.</p>
-			<p>This page does not seam to exist.</p>
+			<p>you're lost buddy.</p>
+			<p>this page doesn't exist.</p>
 			<p>
-				Back to <a href="/index.html">janik.codes</a>.
+				back to <a href="/index.html">janik.codes</a>.
 			</p>
 		</div>
 	);

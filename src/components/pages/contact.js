@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import SupportMe from "../SupportMe";
 
 /* eslint-disable */
 
@@ -12,14 +13,14 @@ function contact() {
 			<h1 className="page-title">contact me</h1>
 			<p>
 				{/* Work: <a href="mailto:j4abdull@uwaterloo.ca">j4abdull@uwaterloo.ca</a> <br /> */}
-				Personal:{" "}
+				personal:{" "}
 				<a href="mailto:janik@janik.codes">janik@janik.codes</a>
 				<br />
-				Phone: <a href="tel:+1-226-978-5283">+1 (226) 978 - 5283</a>
+				phone: <a href="tel:+1-226-978-5283">+1 (226) 978 - 5283</a>
 			</p>
 			<p></p>
 			<p>
-				GitHub:{" "}
+				github:{" "}
 				<a
 					href="https://github.com/JanikThePanic"
 					target="_blank"
@@ -37,7 +38,7 @@ function contact() {
 					JanikDesign
 				</a> */}
 				<br />
-				EasyEDA:{" "}
+				easyEDA:{" "}
 				<a
 					href="https://easyeda.com/jk4abdl/"
 					target="_blank"
@@ -47,7 +48,7 @@ function contact() {
 				</a>
 			</p>
 			<p>
-				LinkedIn:{" "}
+				linkedin:{" "}
 				<a
 					href="https://www.linkedin.com/in/jahangir-janik-abdullayev-303a11188/"
 					target="_blank"
@@ -56,7 +57,7 @@ function contact() {
 					Jahangir Abdullayev
 				</a>
 				<br />
-				Instagram:{" "}
+				instagram:{" "}
 				<a
 					href="https://www.instagram.com/quite_a_janik/"
 					target="_blank"
@@ -65,7 +66,7 @@ function contact() {
 					quite_a_janik
 				</a>
 				<br />
-				Facebook:{" "}
+				facebook:{" "}
 				<a
 					href="https://www.facebook.com/janiktitor"
 					target="_blank"
@@ -74,7 +75,7 @@ function contact() {
 					Jahangir Abdullayev
 				</a>
 				<br />
-				Twitter:{" "}
+				twitter:{" "}
 				<a
 					href="https://twitter.com/the_janik"
 					target="_blank"
@@ -83,18 +84,7 @@ function contact() {
 					the_janik
 				</a>
 			</p>
-			<br />
-			<p>☕ Buy me a Coffee ☕</p>
-			<p>
-				PayPal:{" "}
-				<a
-					href="https://www.paypal.me/thejanik"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					thejanik
-				</a>
-			</p>
+			<SupportMe />
 		</div>
 	);
 }

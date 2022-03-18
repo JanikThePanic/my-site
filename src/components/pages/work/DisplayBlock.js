@@ -24,7 +24,7 @@ export default function DisplayBlock(props) {
 			{/* if 1, dont show, if more than 9, show 9+ */}
 			{props.count > 1 ? (
 				<div className="displayCount">
-					{props.count > 9 ? "9+" : props.count}
+					<p>{props.count > 9 ? "9+" : props.count}</p>
 				</div>
 			) : null}
 
