@@ -47,7 +47,7 @@ body {
 }
 
 .page p {
-	line-height: 160%;
+	line-height: 175%;
 	width: var(--text-max-width);
 }
 
