@@ -35,7 +35,7 @@ function ProjectPage() {
 			<div className="page">
 				<Helmet>
 					<title>
-						{meta.title} {meta.version} | Jahangir Abdullayev
+						{meta.title} {meta.version} - janik
 					</title>
 				</Helmet>
 
