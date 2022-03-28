@@ -1,7 +1,6 @@
 # Jahangir Abdullayev
 
-My personal site  
-UWaterloo Mechatronics, please take me
+my site
 
 ## Support Me
 
