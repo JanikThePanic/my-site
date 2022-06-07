@@ -12,11 +12,11 @@ function home() {
 			<p>
 				Although Jahangir Abdullayev is my full name, Janik remains my
 				preferred legal name, for simplicity’s sake. I am currently an
-				engineering student at _______ University in Ontario Canada.
-				Majoring in _______ I have a great passion for anything
-				robotics-related.
+				engineering student at Western University in Ontario Canada.
+				Majoring in mechatronic engineering. I have a great passion for
+				anything robotics-related.
 			</p>
-			<p>further details are irrelevant.</p>
+			<p>¯\_(ツ)_/¯</p>
 			<p>i like robots.</p>
 		</div>
 	);
