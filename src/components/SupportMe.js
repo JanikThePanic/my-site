@@ -8,6 +8,8 @@ function SupportMe() {
 			{/* if you are seeing this, pls donate */}
 			<h2>☕ buy me a coffee ☕</h2>
 			<p>
+				turns out the things i like cost money
+				<br />
 				paypal.me/
 				<a
 					href="https://www.paypal.me/thejanik"

@@ -73,6 +73,13 @@ a:hover {
 	margin: 2rem 0 0 0;
 }
 
+/* h2 */
+.page-h2 {
+	font-size: 2em;
+	font-weight: 400;
+	margin: 2rem 0 0 0;
+}
+
 /* for hr */
 hr {
 	border: 1px solid #ccc;

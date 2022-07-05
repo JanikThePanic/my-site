@@ -12,8 +12,8 @@ function home() {
 			<p>
 				Although Jahangir Abdullayev is my full name, Janik remains my
 				preferred legal name, for simplicity’s sake. I am currently an
-				engineering student at Western University in Ontario Canada.
-				Majoring in mechatronic engineering. I have a great passion for
+				engineering student at Western University in Ontario Canada,
+				majoring in mechatronic engineering. I have a great passion for
 				anything robotics-related.
 			</p>
 			<p>¯\_(ツ)_/¯</p>

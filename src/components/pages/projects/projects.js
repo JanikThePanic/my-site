@@ -13,6 +13,8 @@ function projects() {
 
 			<h1 className="page-title">projects</h1>
 
+			<h2 className="page-h2">👇 highschool projects (kinda lame ngl)</h2>
+
 			<ul className="project-list">
 				<ProjectItem refName="rc-ultimate" />
 				<ProjectItem refName="macrobox_v2" />
