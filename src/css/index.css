@@ -3,8 +3,8 @@
 /* varibles for colours, fonts, and other */
 :root {
 	/* Typography */
-	font-family: "IBM Plex Serif Light", serif;
-	--font: "IBM Plex Serif Light", serif;
+	font-family: "IBM Plex Sans", sans-serif;
+	--font: "IBM Plex Sans", sans-serif;
 
 	/* widths (with the navbar and all that) */
 	--nav-width: 190px;
@@ -49,6 +49,7 @@ body {
 .page p {
 	line-height: 175%;
 	width: var(--text-max-width);
+	font-weight: 200;
 }
 
 /* links */
@@ -69,14 +70,14 @@ a:hover {
 /* page titles */
 .page-title {
 	font-size: 5em;
-	font-weight: bold;
+	font-weight: 300;
 	margin: 2rem 0 0 0;
 }
 
 /* h2 */
 .page-h2 {
 	font-size: 2em;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 2rem 0 0 0;
 }
 
