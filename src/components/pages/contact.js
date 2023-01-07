@@ -12,7 +12,8 @@ function contact() {
 			</Helmet>
 			<h1 className="page-title">contact me</h1>
 			<p>
-				{/* Work: <a href="mailto:j4abdull@uwaterloo.ca">j4abdull@uwaterloo.ca</a> <br /> */}
+				work: <a href="mailto:jabdull3@uwo.ca">jabdull3@uwo.ca</a>{" "}
+				<br />
 				personal:{" "}
 				<a href="mailto:janik@janik.codes">janik@janik.codes</a>
 				<br />
@@ -37,7 +38,7 @@ function contact() {
 				>
 					JanikDesign
 				</a> */}
-				<br />
+				{/* <br />
 				easyEDA:{" "}
 				<a
 					href="https://easyeda.com/jk4abdl/"
@@ -45,27 +46,27 @@ function contact() {
 					rel="noopener noreferrer"
 				>
 					jk4abdl
-				</a>
+				</a> */}
 			</p>
 			<p>
 				linkedin:{" "}
 				<a
-					href="https://www.linkedin.com/in/jahangir-janik-abdullayev-303a11188/"
+					href="https://www.linkedin.com/in/thejanik/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Jahangir Abdullayev
+					Jahangir (Janik) Abdullayev
 				</a>
-				<br />
+				{/* <br />
 				instagram:{" "}
 				<a
-					href="https://www.instagram.com/quite_a_janik/"
+					href="https://www.instagram.com/janikk.04/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					quite_a_janik
-				</a>
-				<br />
+				</a> */}
+				{/* <br />
 				facebook:{" "}
 				<a
 					href="https://www.facebook.com/janiktitor"
@@ -73,7 +74,7 @@ function contact() {
 					rel="noopener noreferrer"
 				>
 					Jahangir Abdullayev
-				</a>
+				</a> */}
 				<br />
 				twitter:{" "}
 				<a
