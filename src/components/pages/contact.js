@@ -12,10 +12,10 @@ function contact() {
 			</Helmet>
 			<h1 className="page-title">contact me</h1>
 			<p>
-				work: <a href="mailto:jabdull3@uwo.ca">jabdull3@uwo.ca</a>{" "}
+				school: <a href="mailto:jabdull3@uwo.ca">jabdull3@uwo.ca</a>{" "}
 				<br />
-				personal:{" "}
-				<a href="mailto:janik@janik.codes">janik@janik.codes</a>
+				personal/work:{" "}
+				<a href="mailto:jk4abdl@gmail.com">jk4abdl@gmail.com</a>
 				<br />
 				phone: <a href="tel:+1-226-978-5283">+1 (226) 978 - 5283</a>
 			</p>
