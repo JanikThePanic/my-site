@@ -13,7 +13,12 @@ function projects() {
 
 			<h1 className="page-title">projects</h1>
 
-			<h2 className="page-h2">👇 highschool projects (kinda lame ngl)</h2>
+			<h2 className="page-h2">
+				<span role="img" aria-label="hand pointing down">
+					👇
+				</span>{" "}
+				highschool projects (kinda lame ngl)
+			</h2>
 
 			<ul className="project-list">
 				<ProjectItem refName="rc-ultimate" />

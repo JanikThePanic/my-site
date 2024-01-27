@@ -6,7 +6,15 @@ function SupportMe() {
 			<br />
 
 			{/* if you are seeing this, pls donate */}
-			<h2>☕ buy me a coffee ☕</h2>
+			<h2>
+				<span role="img" aria-label="hand pointing down">
+					☕
+				</span>{" "}
+				buy me a coffee{" "}
+				<span role="img" aria-label="hand pointing down">
+					☕
+				</span>
+			</h2>
 			<p>
 				turns out the things i like cost money
 				<br />
