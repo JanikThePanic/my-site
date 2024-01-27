@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 function NotFoundPage() {
 	return (
@@ -12,7 +13,7 @@ function NotFoundPage() {
 			<p>you're lost. i am too, it's okay.</p>
 			<p>this page doesn't exist.</p>
 			<p>
-				back to <a href="/">janik.codes</a>.
+				back to <Link to="/">janik.codes</Link>.
 			</p>
 		</div>
 	);

@@ -12,7 +12,8 @@ import home from "./components/pages/home";
 import projects from "./components/pages/projects/projects";
 import ProjectPage from "./components/pages/projects/ProjectPage";
 import work from "./components/pages/work/work";
-import blog from "./components/pages/blog";
+// import blog from "./components/pages/blog";
+import resume from "./components/pages/resume";
 import contact from "./components/pages/contact";
 import NotFoundPage from "./components/pages/404";
 import friend from "./components/pages/friend";
@@ -121,7 +122,8 @@ function App() {
 					<Route path="/projects/:refName" component={ProjectPage} />
 					{/* other pages */}
 					<Route path="/work" component={work} />
-					<Route path="/blog" component={blog} />
+					{/* <Route path="/blog" component={blog} /> */}
+					<Route path="/resume" component={resume} />
 					<Route path="/contact" component={contact} />
 					{/* fun easteregg */}
 					<Route path="/friends/:refName" component={friend} />
