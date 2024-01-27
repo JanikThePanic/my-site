@@ -30,13 +30,17 @@ function navbar(props) {
 					<Link to="/work">work</Link>
 					{/* <Link to="/blog">blog</Link> */}
 					{/* <Link to="/thoughts">Thoughts</Link> */}
-					<a
+
+					{/* this is when i had a resume linked in dependcies */}
+					{/* <a
 						href={
 							process.env.PUBLIC_URL + "/dependencies/Resume.pdf"
 						}
 					>
 						resume
-					</a>
+					</a> */}
+
+					<Link to="/resume">resume</Link>
 					<Link to="/contact">contact</Link>
 					<Link className="closebtn" onClick={closeNav}>
 						&times;
