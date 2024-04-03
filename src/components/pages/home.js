@@ -10,14 +10,34 @@ function home() {
 			<h1 className="page-title">jahangir abdullayev.</h1>
 
 			<p>
-				Although Jahangir Abdullayev is my full name, Janik remains my
-				preferred legal name, for simplicity’s sake. I am currently an
-				engineering student at Western University in Ontario Canada,
-				majoring in mechatronic engineering. I have a great passion for
-				anything robotics-related.
+				Heyo! My name is Janik (legally Jahangir Abdullayev).{" "}
+				<span role="img" aria-label="Waving hand emoji">
+					👋
+				</span>
 			</p>
-			<p>¯\_(ツ)_/¯</p>
-			<p>i like robots.</p>
+
+			<p>
+				I am an undergraduate engineering student at the University of
+				Western Ontario studying Mechatronics and Artificial
+				Intelligence Systems Engineering.{" "}
+				<span role="img" aria-label="Emojis illustrating my degree">
+					🎓🤖💻
+				</span>
+			</p>
+
+			<p>
+				Starting as a hobbyist, I aim to turn my passion for anything
+				robotics-related into a career. Over the years, I have picked up
+				a wide variety of skills but most importantly adapted to be a
+				quick and efficient learner with the drive to see things done.
+			</p>
+
+			<p>
+				I could say many things here about my skills and inspirations,
+				but at the end of the day:
+			</p>
+
+			<p>i like robots. (INCLUDING the 2005 film, Robots)</p>
 		</div>
 	);
 }
